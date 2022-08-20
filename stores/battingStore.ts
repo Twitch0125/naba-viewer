@@ -1,7 +1,8 @@
 import type { BattingPlayer } from "~~/types";
 
-export const useBattingStore = defineStore("battingStore", {
-  state: () => ({
-    players: [] as BattingPlayer[],
-  }),
+export const useBattingStore = defineStore("battingStore", () => {
+  const players = ref<BattingPlayer[]>([]);
+  return {
+    players,
+  };
 });
