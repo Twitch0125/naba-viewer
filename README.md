@@ -1,6 +1,5 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+# NABA Viewer
+The North American Baseball sim stat viewer. Upload your CSV files and sort by player, team, and more!
 
 ## Setup
 
