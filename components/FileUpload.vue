@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const props = defineProps<{
-  modelValue: any;
+  modelValue: File;
 }>();
 
-const model = useVModel(props, "modelValue");
+const dataModel = useVModel(props, "modelValue");
 
 let dragging = $ref(false);
 let dragCounter = $ref(0);
@@ -24,9 +24,7 @@ const dragLeave = () => {
 const dropHandler = async (event: DragEvent) => {
   dragCounter = 0;
   dragging = false;
-  const { headers, data } = await parseCSVFile(event.dataTransfer.files[0]);
-  console.log("headers", headers);
-  console.log("data", data);
+  dataModel.value = event.dataTransfer.files[0];
 };
 </script>
 
