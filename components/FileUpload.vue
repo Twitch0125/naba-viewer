@@ -21,10 +21,16 @@ const dragLeave = () => {
   }
 };
 
-const dropHandler = async (event: DragEvent) => {
+const dropHandler = (event: DragEvent) => {
   dragCounter = 0;
   dragging = false;
   dataModel.value = event.dataTransfer.files[0];
+};
+const inputHandler = (event: Event) => {
+  console.log("inputHandler", event);
+  dragCounter = 0;
+  dragging = false;
+  dataModel.value = event.target.files[0]; //don't know what to tell ya typescript. Files exists on it
 };
 </script>
 
@@ -65,6 +71,7 @@ const dropHandler = async (event: DragEvent) => {
               <span>Upload a file</span>
               <input
                 id="file-upload"
+                @input="inputHandler"
                 name="file-upload"
                 type="file"
                 class="sr-only"
