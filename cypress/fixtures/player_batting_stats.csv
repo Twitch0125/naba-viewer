@@ -1,0 +1,344 @@
+// List of Teams and their ID's plus league IDs :
+//1 => Orlando Magic (North American Baseball Association => 200)
+//2 => Kansas City Keys (North American Baseball Association => 200)
+//3 => NOVA Navigators (North American Baseball Association => 200)
+//4 => Sacramento Sluggers (North American Baseball Association => 200)
+//5 => Salt Lake City Missionaries (North American Baseball Association => 200)
+//6 => New York Revolution (North American Baseball Association => 200)
+//7 => Brampton Baboons (North American Baseball Association => 200)
+//8 => Atlanta Bombers (North American Baseball Association => 200)
+//9 => Raleigh Raptor Boats (North American Baseball Association => 200)
+//10 => San Antonio Predators (North American Baseball Association => 200)
+//11 => Columbia Crusaders (North American Baseball Association => 200)
+//12 => Monterrey Los Hidalgos (North American Baseball Association => 200)
+//13 => San Juan Defenders (North American Baseball Association => 200)
+//14 => Mexico City Blazers (North American Baseball Association => 200)
+//15 => Richmond Kings (North American Baseball Association => 200)
+//16 => Hamilton Hitters (North American Baseball Association => 200)
+//
+//FILE FORMAT:
+//player ID, lastname, firstname, year, team ID, g, gs, pa, ab, h, 2b, 3b, hr, rbi, r, sb, cs, bb, hp, k, sh, sf, gdp, ibb, ci, pitches seen, vorp, split_id, team_abbr, league_abbr, team_name, league_name, league_level_id, bbrefid, bbrefminorid, OOTP pID
+//split_id: 1 = overall; 2 = vsL; 3 = vsR; 21 = Playoffs
+//NOTE: Player, team and league names are purely cosmetical and will not be used when importing stats from this file!
+356,Adame,Alex,2022,14,75,74,316,290,96,27,2,1,39,36,4,0,15,5,43,3,3,7,0,0,1046,2.1,1,MC,NABA,Mexico City,North American Baseball Association,1,,,356,eol
+356,Adame,Alex,2022,14,74,61,267,245,81,23,1,1,34,29,0,0,14,3,35,2,3,5,0,0,0,1.7,3,MC,NABA,Mexico City,North American Baseball Association,1,,,356,eol
+356,Adame,Alex,2022,14,24,13,49,45,15,4,1,0,5,7,0,0,1,2,8,1,0,2,0,0,0,0.8,2,MC,NABA,Mexico City,North American Baseball Association,1,,,356,eol
+356,Adame,Alex,2022,14,16,16,70,66,24,9,0,0,8,10,0,0,3,0,8,1,0,1,0,0,222,1.0,21,MC,NABA,Mexico City,North American Baseball Association,1,,,356,eol
+356,Adame,Alex,2023,14,75,75,323,310,99,33,1,0,52,29,0,1,7,4,41,0,2,19,0,0,1025,0.8,1,MC,NABA,Mexico City,North American Baseball Association,1,,,356,eol
+356,Adame,Alex,2023,14,25,15,53,52,15,3,0,0,10,3,0,0,1,0,10,0,0,3,0,0,0,0.3,2,MC,NABA,Mexico City,North American Baseball Association,1,,,356,eol
+356,Adame,Alex,2023,14,74,60,270,258,84,30,1,0,42,26,0,0,6,4,31,0,2,16,0,0,0,1.4,3,MC,NABA,Mexico City,North American Baseball Association,1,,,356,eol
+735,Adamic,John,2022,10,62,62,230,209,51,12,1,2,28,28,0,0,17,2,38,0,2,4,0,0,822,-1.2,1,SA,NABA,San Antonio,North American Baseball Association,1,,,735,eol
+735,Adamic,John,2022,10,58,46,176,162,40,10,1,1,19,20,0,0,10,2,27,0,2,3,0,0,0,-0.8,3,SA,NABA,San Antonio,North American Baseball Association,1,,,735,eol
+735,Adamic,John,2022,10,23,16,54,47,11,2,0,1,9,8,0,0,7,0,11,0,0,1,0,0,0,-0.6,2,SA,NABA,San Antonio,North American Baseball Association,1,,,735,eol
+735,Adamic,John,2023,10,16,15,55,54,13,3,1,1,3,5,0,0,1,0,13,0,0,0,0,0,216,-0.2,1,SA,NABA,San Antonio,North American Baseball Association,1,,,735,eol
+735,Adamic,John,2023,10,15,13,49,48,12,3,1,1,3,5,0,0,1,0,12,0,0,0,0,0,0,-0.1,3,SA,NABA,San Antonio,North American Baseball Association,1,,,735,eol
+735,Adamic,John,2023,10,3,2,6,6,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,-0.1,2,SA,NABA,San Antonio,North American Baseball Association,1,,,735,eol
+400,Aguilar,Mario,2023,16,24,22,94,85,32,7,0,2,11,10,0,0,9,0,13,0,0,2,0,0,344,0.7,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,400,eol
+400,Aguilar,Mario,2023,16,22,9,58,53,18,2,0,1,4,6,0,0,5,0,9,0,0,2,0,0,0,0.1,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,400,eol
+400,Aguilar,Mario,2023,16,13,13,36,32,14,5,0,1,7,4,0,0,4,0,4,0,0,0,0,0,0,0.4,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,400,eol
+166,Aguilar,Tim,2022,12,77,75,278,259,51,13,0,4,18,23,8,2,15,1,50,2,1,9,0,0,1020,-0.3,1,MON,NABA,Monterrey,North American Baseball Association,1,,,166,eol
+166,Aguilar,Tim,2022,12,73,59,229,213,46,12,0,3,17,20,0,0,12,1,40,2,1,7,0,0,0,0.2,3,MON,NABA,Monterrey,North American Baseball Association,1,,,166,eol
+166,Aguilar,Tim,2022,12,23,15,49,46,5,1,0,1,1,3,0,0,3,0,10,0,0,2,0,0,0,0.5,2,MON,NABA,Monterrey,North American Baseball Association,1,,,166,eol
+166,Aguilar,Tim,2023,12,76,75,246,225,47,11,2,0,15,19,5,5,11,4,65,4,2,5,0,0,919,-0.7,1,MON,NABA,Monterrey,North American Baseball Association,1,,,166,eol
+166,Aguilar,Tim,2023,12,69,57,194,179,37,7,2,0,15,17,0,0,7,4,51,2,2,3,0,0,0,-0.2,3,MON,NABA,Monterrey,North American Baseball Association,1,,,166,eol
+166,Aguilar,Tim,2023,12,27,18,52,46,10,4,0,0,0,2,0,0,4,0,14,2,0,2,0,0,0,0.6,2,MON,NABA,Monterrey,North American Baseball Association,1,,,166,eol
+699,Ambriz,Roman,2022,12,31,14,74,64,18,5,1,1,5,7,0,2,7,2,21,0,0,2,1,1,296,0.1,1,MON,NABA,Monterrey,North American Baseball Association,1,,,699,eol
+699,Ambriz,Roman,2022,12,29,12,64,55,13,3,1,1,5,6,0,0,7,1,20,0,0,2,1,1,0,-0.1,3,MON,NABA,Monterrey,North American Baseball Association,1,,,699,eol
+699,Ambriz,Roman,2022,12,6,2,10,9,5,2,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0.1,2,MON,NABA,Monterrey,North American Baseball Association,1,,,699,eol
+699,Ambriz,Roman,2023,12,42,14,78,70,12,3,1,2,10,7,0,3,7,0,20,0,1,3,1,0,323,-0.4,1,MON,NABA,Monterrey,North American Baseball Association,1,,,699,eol
+699,Ambriz,Roman,2023,12,37,8,60,52,10,3,1,1,9,6,0,0,7,0,14,0,1,3,1,0,0,-0.1,3,MON,NABA,Monterrey,North American Baseball Association,1,,,699,eol
+699,Ambriz,Roman,2023,12,9,6,18,18,2,0,0,1,1,1,0,0,0,0,6,0,0,0,0,0,0,-0.2,2,MON,NABA,Monterrey,North American Baseball Association,1,,,699,eol
+214,Anderson,John,2022,11,77,76,344,318,102,20,3,5,48,39,7,4,20,2,40,0,4,12,0,0,1244,0.9,1,COL,NABA,Columbia,North American Baseball Association,1,,,214,eol
+214,Anderson,John,2022,11,26,18,65,58,20,5,0,1,11,10,0,0,5,1,5,0,1,1,0,0,0,-0.2,2,COL,NABA,Columbia,North American Baseball Association,1,,,214,eol
+214,Anderson,John,2022,11,73,58,279,260,82,15,3,4,37,29,0,0,15,1,35,0,3,11,0,0,0,0.4,3,COL,NABA,Columbia,North American Baseball Association,1,,,214,eol
+214,Anderson,John,2023,11,75,75,330,313,92,20,7,3,35,35,2,6,12,4,34,0,1,12,0,0,1205,-0.2,1,COL,NABA,Columbia,North American Baseball Association,1,,,214,eol
+214,Anderson,John,2023,11,72,60,277,262,76,19,4,2,29,25,0,0,11,3,29,0,1,10,0,0,0,0.1,3,COL,NABA,Columbia,North American Baseball Association,1,,,214,eol
+214,Anderson,John,2023,11,19,15,53,51,16,1,3,1,6,10,0,0,1,1,5,0,0,2,0,0,0,-0.2,2,COL,NABA,Columbia,North American Baseball Association,1,,,214,eol
+124,Andrade,Domingo,2022,7,80,77,356,317,91,22,1,11,38,46,8,2,34,5,59,0,0,4,3,0,1343,1.7,1,BRA,NABA,Brampton,North American Baseball Association,1,,,124,eol
+124,Andrade,Domingo,2022,7,21,10,43,39,10,4,0,1,3,5,0,0,3,1,9,0,0,0,0,0,0,0.0,2,BRA,NABA,Brampton,North American Baseball Association,1,,,124,eol
+124,Andrade,Domingo,2022,7,78,67,313,278,81,18,1,10,35,41,0,0,31,4,50,0,0,4,3,0,0,1.6,3,BRA,NABA,Brampton,North American Baseball Association,1,,,124,eol
+124,Andrade,Domingo,2023,7,78,77,350,314,77,24,3,11,48,41,2,3,30,3,81,0,2,3,4,1,1309,0.6,1,BRA,NABA,Brampton,North American Baseball Association,1,,,124,eol
+124,Andrade,Domingo,2023,7,75,57,280,251,67,22,2,10,42,36,0,0,26,2,64,0,1,3,4,0,0,1.0,3,BRA,NABA,Brampton,North American Baseball Association,1,,,124,eol
+124,Andrade,Domingo,2023,7,30,20,70,63,10,2,1,1,6,5,0,0,4,1,17,0,1,0,0,1,0,-0.6,2,BRA,NABA,Brampton,North American Baseball Association,1,,,124,eol
+158,Angulo,Danny,2022,13,67,61,269,241,73,15,1,10,41,45,2,0,25,1,36,0,2,8,0,0,1023,1.3,1,SJ,NABA,San Juan,North American Baseball Association,1,,,158,eol
+158,Angulo,Danny,2022,13,62,49,227,206,61,14,1,9,34,39,0,0,19,1,33,0,1,7,0,0,0,1.2,3,SJ,NABA,San Juan,North American Baseball Association,1,,,158,eol
+158,Angulo,Danny,2022,13,18,12,42,35,12,1,0,1,7,6,0,0,6,0,3,0,1,1,0,0,0,0.2,2,SJ,NABA,San Juan,North American Baseball Association,1,,,158,eol
+158,Angulo,Danny,2023,9,63,59,270,236,82,19,1,6,46,34,2,1,19,10,39,0,5,5,1,0,973,2.2,1,RAL,NABA,Raleigh,North American Baseball Association,1,,,158,eol
+158,Angulo,Danny,2023,9,60,52,239,207,74,17,1,6,39,30,0,0,17,10,32,0,5,2,1,0,0,2.0,3,RAL,NABA,Raleigh,North American Baseball Association,1,,,158,eol
+158,Angulo,Danny,2023,9,15,7,31,29,8,2,0,0,7,4,0,0,2,0,7,0,0,3,0,0,0,-0.2,2,RAL,NABA,Raleigh,North American Baseball Association,1,,,158,eol
+160,Archibeque,Alex,2022,14,79,77,365,348,116,35,6,9,47,57,5,7,7,6,26,0,4,3,0,0,1105,1.2,1,MC,NABA,Mexico City,North American Baseball Association,1,,,160,eol
+160,Archibeque,Alex,2022,14,79,64,313,298,98,32,6,9,42,49,0,0,6,6,19,0,3,3,0,0,0,1.6,3,MC,NABA,Mexico City,North American Baseball Association,1,,,160,eol
+160,Archibeque,Alex,2022,14,22,13,52,50,18,3,0,0,5,8,0,0,1,0,7,0,1,0,0,0,0,-0.4,2,MC,NABA,Mexico City,North American Baseball Association,1,,,160,eol
+160,Archibeque,Alex,2022,14,16,16,76,72,32,10,0,1,7,19,1,1,3,0,4,0,1,1,0,0,277,0.5,21,MC,NABA,Mexico City,North American Baseball Association,1,,,160,eol
+160,Archibeque,Alex,2023,14,80,78,341,313,115,33,3,11,65,52,8,6,25,3,33,0,0,4,3,0,1152,2.9,1,MC,NABA,Mexico City,North American Baseball Association,1,,,160,eol
+160,Archibeque,Alex,2023,14,24,15,53,51,23,6,0,3,9,10,0,0,0,2,9,0,0,0,0,0,0,0.3,2,MC,NABA,Mexico City,North American Baseball Association,1,,,160,eol
+160,Archibeque,Alex,2023,14,79,63,288,262,92,27,3,8,56,42,0,0,25,1,24,0,0,4,3,0,0,2.1,3,MC,NABA,Mexico City,North American Baseball Association,1,,,160,eol
+658,Arcia,Ed,2023,13,42,31,140,114,31,7,1,4,12,20,0,0,24,1,33,0,1,3,1,0,559,0.3,1,SJ,NABA,San Juan,North American Baseball Association,1,,,658,eol
+658,Arcia,Ed,2023,13,42,29,132,107,28,7,1,4,12,18,0,0,23,1,32,0,1,3,1,0,0,0.5,3,SJ,NABA,San Juan,North American Baseball Association,1,,,658,eol
+658,Arcia,Ed,2023,13,5,2,8,7,3,0,0,0,0,2,0,0,1,0,1,0,0,0,0,0,0,-0.2,2,SJ,NABA,San Juan,North American Baseball Association,1,,,658,eol
+451,Arechiga,Avraham,2022,4,75,75,275,250,74,16,1,3,25,34,3,2,22,0,44,0,3,7,0,0,974,1.1,1,SAC,NABA,Sacramento,North American Baseball Association,1,,,451,eol
+451,Arechiga,Avraham,2022,4,69,61,229,211,66,14,1,3,20,31,0,0,15,0,33,0,3,6,0,0,0,1.4,3,SAC,NABA,Sacramento,North American Baseball Association,1,,,451,eol
+451,Arechiga,Avraham,2022,4,24,14,46,39,8,2,0,0,5,3,0,0,7,0,11,0,0,1,0,0,0,0.5,2,SAC,NABA,Sacramento,North American Baseball Association,1,,,451,eol
+451,Arechiga,Avraham,2023,4,75,74,298,271,60,16,2,2,20,32,2,2,20,4,59,3,0,10,0,0,1069,-0.1,1,SAC,NABA,Sacramento,North American Baseball Association,1,,,451,eol
+451,Arechiga,Avraham,2023,4,72,52,228,209,47,12,2,1,16,24,0,0,15,2,42,2,0,6,0,0,0,-0.1,3,SAC,NABA,Sacramento,North American Baseball Association,1,,,451,eol
+451,Arechiga,Avraham,2023,4,32,22,70,62,13,4,0,1,4,8,0,0,5,2,17,1,0,4,0,0,0,0.3,2,SAC,NABA,Sacramento,North American Baseball Association,1,,,451,eol
+461,Armenta,Alex,2022,16,24,20,85,77,18,7,0,1,8,13,0,0,8,0,26,0,0,2,0,0,333,0.1,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,461,eol
+461,Armenta,Alex,2022,16,8,4,16,13,1,0,0,0,0,2,0,0,3,0,6,0,0,0,0,0,0,-0.0,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,461,eol
+461,Armenta,Alex,2022,16,22,16,69,64,17,7,0,1,8,11,0,0,5,0,20,0,0,2,0,0,0,0.3,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,461,eol
+461,Armenta,Alex,2023,16,28,22,91,81,22,7,0,1,8,11,0,0,10,0,27,0,0,2,0,0,362,0.3,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,461,eol
+461,Armenta,Alex,2023,16,22,14,71,62,16,5,0,1,5,8,0,0,9,0,19,0,0,2,0,0,0,0.4,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,461,eol
+461,Armenta,Alex,2023,16,8,8,20,19,6,2,0,0,3,3,0,0,1,0,8,0,0,0,0,0,0,0.2,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,461,eol
+755,Avila,Bill,2022,2,60,60,233,217,57,14,2,3,33,27,0,0,11,2,30,0,3,7,0,0,770,-0.4,1,KC,NABA,Kansas City,North American Baseball Association,1,,,755,eol
+755,Avila,Bill,2022,2,56,49,192,180,51,12,2,2,28,22,0,0,8,1,23,0,3,6,0,0,0,-0.4,3,KC,NABA,Kansas City,North American Baseball Association,1,,,755,eol
+755,Avila,Bill,2022,2,21,11,41,37,6,2,0,1,5,5,0,0,3,1,7,0,0,1,0,0,0,-0.9,2,KC,NABA,Kansas City,North American Baseball Association,1,,,755,eol
+755,Avila,Bill,2023,2,62,61,238,221,56,11,1,2,30,23,1,1,11,3,27,1,2,6,0,0,782,-0.2,1,KC,NABA,Kansas City,North American Baseball Association,1,,,755,eol
+755,Avila,Bill,2023,2,58,47,196,184,46,8,1,2,27,21,0,0,9,2,22,0,1,5,0,0,0,-0.3,3,KC,NABA,Kansas City,North American Baseball Association,1,,,755,eol
+755,Avila,Bill,2023,2,21,14,42,37,10,3,0,0,3,2,0,0,2,1,5,1,1,1,0,0,0,-0.1,2,KC,NABA,Kansas City,North American Baseball Association,1,,,755,eol
+455,Ayala,Danny,2022,11,11,10,38,36,6,1,0,0,2,0,0,0,1,1,9,0,0,0,0,0,142,-0.4,1,COL,NABA,Columbia,North American Baseball Association,1,,,455,eol
+455,Ayala,Danny,2022,11,11,8,32,31,6,1,0,0,2,0,0,0,0,1,7,0,0,0,0,0,0,-0.4,3,COL,NABA,Columbia,North American Baseball Association,1,,,455,eol
+455,Ayala,Danny,2022,11,2,2,6,5,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,0,0,-0.2,2,COL,NABA,Columbia,North American Baseball Association,1,,,455,eol
+306,Baldwin,Nate,2022,10,77,75,327,299,55,12,1,11,37,24,1,4,17,8,78,0,3,6,5,0,1219,-1.6,1,SA,NABA,San Antonio,North American Baseball Association,1,,,306,eol
+306,Baldwin,Nate,2022,10,73,59,257,234,45,10,1,8,27,18,0,0,14,7,57,0,2,6,4,0,0,-0.9,3,SA,NABA,San Antonio,North American Baseball Association,1,,,306,eol
+306,Baldwin,Nate,2022,10,33,16,70,65,10,2,0,3,10,6,0,0,3,1,21,0,1,0,1,0,0,-0.5,2,SA,NABA,San Antonio,North American Baseball Association,1,,,306,eol
+306,Baldwin,Nate,2023,10,77,75,322,294,75,20,1,13,51,43,7,1,26,0,64,0,2,12,0,0,1248,1.4,1,SA,NABA,San Antonio,North American Baseball Association,1,,,306,eol
+306,Baldwin,Nate,2023,10,73,62,273,251,65,17,1,12,45,36,0,0,20,0,54,0,2,10,0,0,0,0.8,3,SA,NABA,San Antonio,North American Baseball Association,1,,,306,eol
+306,Baldwin,Nate,2023,10,21,13,49,43,10,3,0,1,6,7,0,0,6,0,10,0,0,2,0,0,0,-0.0,2,SA,NABA,San Antonio,North American Baseball Association,1,,,306,eol
+358,Barber,Sean,2022,9,34,12,54,49,14,7,0,0,5,1,1,0,3,0,9,1,1,3,0,0,195,-0.3,1,RAL,NABA,Raleigh,North American Baseball Association,1,,,358,eol
+358,Barber,Sean,2022,9,22,10,46,41,12,5,0,0,5,0,0,0,3,0,9,1,1,3,0,0,0,-0.2,3,RAL,NABA,Raleigh,North American Baseball Association,1,,,358,eol
+358,Barber,Sean,2022,9,5,2,8,8,2,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,-0.3,2,RAL,NABA,Raleigh,North American Baseball Association,1,,,358,eol
+752,Barilla,Chris,2022,12,74,72,287,263,57,12,1,4,34,24,9,3,17,7,68,0,0,6,0,0,1087,-0.2,1,MON,NABA,Monterrey,North American Baseball Association,1,,,752,eol
+752,Barilla,Chris,2022,12,24,15,56,50,11,2,1,1,9,5,0,0,4,2,13,0,0,2,0,0,0,0.3,2,MON,NABA,Monterrey,North American Baseball Association,1,,,752,eol
+752,Barilla,Chris,2022,12,71,57,231,213,46,10,0,3,25,19,0,0,13,5,55,0,0,4,0,0,0,-0.3,3,MON,NABA,Monterrey,North American Baseball Association,1,,,752,eol
+752,Barilla,Chris,2023,12,76,74,306,276,70,15,3,4,20,31,14,4,21,8,57,0,1,5,1,0,1138,0.9,1,MON,NABA,Monterrey,North American Baseball Association,1,,,752,eol
+752,Barilla,Chris,2023,12,70,56,240,221,61,13,3,3,18,26,0,0,12,6,39,0,1,4,0,0,0,0.8,3,MON,NABA,Monterrey,North American Baseball Association,1,,,752,eol
+752,Barilla,Chris,2023,12,30,18,66,55,9,2,0,1,2,5,0,0,9,2,18,0,0,1,1,0,0,0.1,2,MON,NABA,Monterrey,North American Baseball Association,1,,,752,eol
+646,Barlow,Jason,2022,9,77,75,299,274,56,9,1,2,20,33,4,1,16,6,64,0,3,3,0,0,1168,-0.6,1,RAL,NABA,Raleigh,North American Baseball Association,1,,,646,eol
+646,Barlow,Jason,2022,9,73,63,256,237,49,8,1,2,19,31,0,0,11,5,56,0,3,2,0,0,0,-0.8,3,RAL,NABA,Raleigh,North American Baseball Association,1,,,646,eol
+646,Barlow,Jason,2022,9,25,12,43,37,7,1,0,0,1,2,0,0,5,1,8,0,0,1,0,0,0,0.2,2,RAL,NABA,Raleigh,North American Baseball Association,1,,,646,eol
+646,Barlow,Jason,2023,9,77,73,287,255,54,11,1,2,23,23,3,0,15,11,55,4,2,10,0,0,1050,-0.3,1,RAL,NABA,Raleigh,North American Baseball Association,1,,,646,eol
+646,Barlow,Jason,2023,9,75,64,253,228,48,10,0,2,21,20,0,0,12,9,49,2,2,9,0,0,0,-0.4,3,RAL,NABA,Raleigh,North American Baseball Association,1,,,646,eol
+646,Barlow,Jason,2023,9,16,9,34,27,6,1,1,0,2,3,0,0,3,2,6,2,0,1,0,0,0,0.5,2,RAL,NABA,Raleigh,North American Baseball Association,1,,,646,eol
+73,Barnhart,Ted,2022,7,32,27,119,111,26,5,0,8,18,12,0,0,7,1,26,0,0,2,0,0,442,0.1,1,BRA,NABA,Brampton,North American Baseball Association,1,,,73,eol
+73,Barnhart,Ted,2022,7,17,12,43,39,16,4,0,6,13,10,0,0,4,0,10,0,0,0,0,0,0,1.0,2,BRA,NABA,Brampton,North American Baseball Association,1,,,73,eol
+73,Barnhart,Ted,2022,7,28,15,76,72,10,1,0,2,5,2,0,0,3,1,16,0,0,2,0,0,0,-0.7,3,BRA,NABA,Brampton,North American Baseball Association,1,,,73,eol
+73,Barnhart,Ted,2023,7,49,46,203,186,35,6,0,8,24,19,1,1,15,0,55,0,2,1,0,0,766,-1.1,1,BRA,NABA,Brampton,North American Baseball Association,1,,,73,eol
+73,Barnhart,Ted,2023,7,45,25,134,120,19,3,0,3,16,12,0,0,12,0,30,0,2,1,0,0,0,-1.2,3,BRA,NABA,Brampton,North American Baseball Association,1,,,73,eol
+73,Barnhart,Ted,2023,7,27,21,69,66,16,3,0,5,8,7,0,0,3,0,25,0,0,0,0,0,0,-0.3,2,BRA,NABA,Brampton,North American Baseball Association,1,,,73,eol
+272,Bass,Steven,2022,4,75,75,339,323,96,23,4,8,36,47,0,1,12,2,40,0,2,7,0,0,1125,0.6,1,SAC,NABA,Sacramento,North American Baseball Association,1,,,272,eol
+272,Bass,Steven,2022,4,73,60,283,269,78,20,4,4,26,39,0,0,11,2,35,0,1,6,0,0,0,0.4,3,SAC,NABA,Sacramento,North American Baseball Association,1,,,272,eol
+272,Bass,Steven,2022,4,27,15,56,54,18,3,0,4,10,8,0,0,1,0,5,0,1,1,0,0,0,0.1,2,SAC,NABA,Sacramento,North American Baseball Association,1,,,272,eol
+272,Bass,Steven,2023,4,73,69,341,323,88,23,4,4,25,42,2,2,11,5,41,0,2,11,3,0,1052,-0.5,1,SAC,NABA,Sacramento,North American Baseball Association,1,,,272,eol
+272,Bass,Steven,2023,4,68,52,277,267,75,20,4,4,21,35,0,0,8,1,34,0,1,7,2,0,0,-0.4,3,SAC,NABA,Sacramento,North American Baseball Association,1,,,272,eol
+272,Bass,Steven,2023,4,29,17,64,56,13,3,0,0,4,7,0,0,3,4,7,0,1,4,1,0,0,-0.9,2,SAC,NABA,Sacramento,North American Baseball Association,1,,,272,eol
+640,Bell,John,2022,16,80,78,362,328,102,27,4,13,64,54,2,2,32,1,50,0,1,7,6,0,1408,2.3,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,640,eol
+640,Bell,John,2022,16,78,62,301,273,88,25,4,11,56,44,0,0,26,1,40,0,1,6,6,0,0,1.8,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,640,eol
+640,Bell,John,2022,16,24,16,61,55,14,2,0,2,8,10,0,0,6,0,10,0,0,1,0,0,0,-0.3,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,640,eol
+640,Bell,John,2022,16,11,11,48,45,14,2,0,3,9,12,1,0,3,0,8,0,0,1,0,0,170,-0.1,21,HAM,NABA,Hamilton,North American Baseball Association,1,,,640,eol
+640,Bell,John,2023,16,79,78,366,330,111,22,3,23,79,61,0,0,33,2,59,0,1,4,4,0,1407,3.3,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,640,eol
+640,Bell,John,2023,16,32,24,83,77,21,7,0,5,18,13,0,0,4,1,17,0,1,1,0,0,0,-0.1,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,640,eol
+640,Bell,John,2023,16,77,54,283,253,90,15,3,18,61,48,0,0,29,1,42,0,0,3,4,0,0,2.9,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,640,eol
+219,Belo,Casey,2022,10,80,75,343,317,97,19,6,2,37,44,22,3,18,0,40,5,3,3,1,0,1177,1.8,1,SA,NABA,San Antonio,North American Baseball Association,1,,,219,eol
+219,Belo,Casey,2022,10,76,58,273,252,75,17,6,1,31,36,0,0,14,0,33,4,3,1,1,0,0,0.9,3,SA,NABA,San Antonio,North American Baseball Association,1,,,219,eol
+219,Belo,Casey,2022,10,31,17,70,65,22,2,0,1,6,8,0,0,4,0,7,1,0,2,0,0,0,0.7,2,SA,NABA,San Antonio,North American Baseball Association,1,,,219,eol
+219,Belo,Casey,2023,10,45,44,187,176,50,9,3,0,18,22,10,2,11,0,20,0,0,2,2,0,587,0.8,1,SA,NABA,San Antonio,North American Baseball Association,1,,,219,eol
+219,Belo,Casey,2023,10,44,37,159,148,41,9,2,0,12,18,0,0,11,0,17,0,0,1,2,0,0,0.5,3,SA,NABA,San Antonio,North American Baseball Association,1,,,219,eol
+219,Belo,Casey,2023,10,14,7,28,28,9,0,1,0,6,4,0,0,0,0,3,0,0,1,0,0,0,0.5,2,SA,NABA,San Antonio,North American Baseball Association,1,,,219,eol
+219,Belo,Casey,2023,9,31,30,136,130,45,8,1,1,8,19,12,3,5,0,12,1,0,0,0,0,441,1.0,1,RAL,NABA,Raleigh,North American Baseball Association,1,,,219,eol
+219,Belo,Casey,2023,9,30,26,117,111,38,8,1,0,7,13,0,0,5,0,11,1,0,0,0,0,0,0.8,3,RAL,NABA,Raleigh,North American Baseball Association,1,,,219,eol
+219,Belo,Casey,2023,9,9,4,19,19,7,0,0,1,1,6,0,0,0,0,1,0,0,0,0,0,0,0.4,2,RAL,NABA,Raleigh,North American Baseball Association,1,,,219,eol
+416,Benjamin,Jack,2022,13,78,78,353,315,98,19,2,9,45,45,0,0,20,15,33,0,3,14,4,0,1205,1.0,1,SJ,NABA,San Juan,North American Baseball Association,1,,,416,eol
+416,Benjamin,Jack,2022,13,75,62,295,260,82,17,2,7,39,42,0,0,18,14,25,0,3,13,3,0,0,1.4,3,SJ,NABA,San Juan,North American Baseball Association,1,,,416,eol
+416,Benjamin,Jack,2022,13,23,16,58,55,16,2,0,2,6,3,0,0,2,1,8,0,0,1,1,0,0,-0.2,2,SJ,NABA,San Juan,North American Baseball Association,1,,,416,eol
+416,Benjamin,Jack,2023,13,80,78,348,322,100,27,0,10,42,46,0,0,16,8,46,0,1,16,0,1,1189,0.7,1,SJ,NABA,San Juan,North American Baseball Association,1,,,416,eol
+416,Benjamin,Jack,2023,13,77,61,286,263,85,23,0,9,39,39,0,0,15,6,41,0,1,12,0,1,0,1.4,3,SJ,NABA,San Juan,North American Baseball Association,1,,,416,eol
+416,Benjamin,Jack,2023,13,27,17,62,59,15,4,0,1,3,7,0,0,1,2,5,0,0,4,0,0,0,-0.6,2,SJ,NABA,San Juan,North American Baseball Association,1,,,416,eol
+562,Bernal,Ervin,2022,1,69,64,301,279,89,14,3,10,43,45,5,4,15,3,34,0,4,5,0,0,1046,2.1,1,ORL,NABA,Orlando,North American Baseball Association,1,,,562,eol
+562,Bernal,Ervin,2022,1,65,48,244,225,71,12,3,8,34,37,0,0,12,3,29,0,4,5,0,0,0,1.8,3,ORL,NABA,Orlando,North American Baseball Association,1,,,562,eol
+562,Bernal,Ervin,2022,1,25,16,57,54,18,2,0,2,9,8,0,0,3,0,5,0,0,0,0,0,0,0.8,2,ORL,NABA,Orlando,North American Baseball Association,1,,,562,eol
+562,Bernal,Ervin,2022,1,5,1,8,7,0,0,0,0,0,1,0,0,0,1,1,0,0,1,0,0,22,0.3,21,ORL,NABA,Orlando,North American Baseball Association,1,,,562,eol
+562,Bernal,Ervin,2023,1,45,14,75,70,21,2,1,1,7,10,2,0,5,0,5,0,0,2,0,0,268,0.5,1,ORL,NABA,Orlando,North American Baseball Association,1,,,562,eol
+562,Bernal,Ervin,2023,1,15,8,31,29,11,1,1,1,3,4,0,0,2,0,2,0,0,1,0,0,0,0.6,2,ORL,NABA,Orlando,North American Baseball Association,1,,,562,eol
+562,Bernal,Ervin,2023,1,20,6,44,41,10,1,0,0,4,6,0,0,3,0,3,0,0,1,0,0,0,0.1,3,ORL,NABA,Orlando,North American Baseball Association,1,,,562,eol
+495,Berry,Eric,2022,8,63,61,254,238,68,16,3,3,29,22,0,0,13,1,58,0,2,14,0,0,937,0.3,1,ATL,NABA,Atlanta,North American Baseball Association,1,,,495,eol
+495,Berry,Eric,2022,8,59,48,215,202,61,14,3,2,22,19,0,0,11,1,46,0,1,11,0,0,0,0.6,3,ATL,NABA,Atlanta,North American Baseball Association,1,,,495,eol
+495,Berry,Eric,2022,8,18,13,39,36,7,2,0,1,7,3,0,0,2,0,12,0,1,3,0,0,0,-0.3,2,ATL,NABA,Atlanta,North American Baseball Association,1,,,495,eol
+495,Berry,Eric,2022,8,9,9,35,33,6,1,0,1,2,4,0,0,2,0,8,0,0,1,0,0,127,-0.5,21,ATL,NABA,Atlanta,North American Baseball Association,1,,,495,eol
+495,Berry,Eric,2023,8,61,61,248,230,56,15,1,7,28,22,0,1,16,1,50,0,1,6,0,0,927,0.0,1,ATL,NABA,Atlanta,North American Baseball Association,1,,,495,eol
+495,Berry,Eric,2023,8,58,46,197,185,39,9,1,6,23,15,0,0,10,1,38,0,1,5,0,0,0,-0.4,3,ATL,NABA,Atlanta,North American Baseball Association,1,,,495,eol
+495,Berry,Eric,2023,8,24,15,51,45,17,6,0,1,5,7,0,0,6,0,12,0,0,1,0,0,0,0.6,2,ATL,NABA,Atlanta,North American Baseball Association,1,,,495,eol
+314,Bivens,Elijah,2023,15,80,78,335,312,111,28,2,11,50,48,1,0,14,5,31,0,4,12,1,0,1093,2.1,1,RIC,NABA,Richmond,North American Baseball Association,1,,,314,eol
+314,Bivens,Elijah,2023,15,25,12,50,48,19,2,1,2,11,4,0,0,0,0,4,0,2,1,0,0,0,-0.2,2,RIC,NABA,Richmond,North American Baseball Association,1,,,314,eol
+314,Bivens,Elijah,2023,15,79,66,285,264,92,26,1,9,39,44,0,0,14,5,27,0,2,11,1,0,0,1.8,3,RIC,NABA,Richmond,North American Baseball Association,1,,,314,eol
+515,Blanco,Rod,2022,8,76,74,337,307,102,31,4,4,34,66,6,2,20,10,43,0,0,9,0,0,1207,2.7,1,ATL,NABA,Atlanta,North American Baseball Association,1,,,515,eol
+515,Blanco,Rod,2022,8,70,59,278,251,82,24,4,2,27,54,0,0,17,10,34,0,0,7,0,0,0,2.0,3,ATL,NABA,Atlanta,North American Baseball Association,1,,,515,eol
+515,Blanco,Rod,2022,8,24,15,59,56,20,7,0,2,7,12,0,0,3,0,9,0,0,2,0,0,0,0.6,2,ATL,NABA,Atlanta,North American Baseball Association,1,,,515,eol
+515,Blanco,Rod,2022,8,9,9,39,37,5,1,0,0,5,1,0,0,1,0,6,0,1,1,0,0,144,-0.5,21,ATL,NABA,Atlanta,North American Baseball Association,1,,,515,eol
+515,Blanco,Rod,2023,8,74,73,336,311,81,25,2,6,33,42,3,2,17,6,47,0,2,8,0,0,1202,0.2,1,ATL,NABA,Atlanta,North American Baseball Association,1,,,515,eol
+515,Blanco,Rod,2023,8,72,59,278,258,67,21,2,6,28,36,0,0,12,6,38,0,2,7,0,0,0,0.2,3,ATL,NABA,Atlanta,North American Baseball Association,1,,,515,eol
+515,Blanco,Rod,2023,8,24,14,58,53,14,4,0,0,5,6,0,0,5,0,9,0,0,1,0,0,0,-0.3,2,ATL,NABA,Atlanta,North American Baseball Association,1,,,515,eol
+446,Boatner,Byron,2022,12,54,54,211,195,49,8,3,0,14,19,0,0,12,1,43,1,2,4,0,0,753,-0.1,1,MON,NABA,Monterrey,North American Baseball Association,1,,,446,eol
+446,Boatner,Byron,2022,12,53,46,173,160,38,7,3,0,13,16,0,0,10,1,36,0,2,4,0,0,0,-0.1,3,MON,NABA,Monterrey,North American Baseball Association,1,,,446,eol
+446,Boatner,Byron,2022,12,19,8,38,35,11,1,0,0,1,3,0,0,2,0,7,1,0,0,0,0,0,0.3,2,MON,NABA,Monterrey,North American Baseball Association,1,,,446,eol
+446,Boatner,Byron,2023,12,54,54,205,187,36,10,0,1,11,15,4,1,11,3,45,3,1,5,0,0,765,-0.5,1,MON,NABA,Monterrey,North American Baseball Association,1,,,446,eol
+446,Boatner,Byron,2023,12,52,44,167,156,25,8,0,1,9,13,0,0,7,2,37,1,1,4,0,0,0,-0.9,3,MON,NABA,Monterrey,North American Baseball Association,1,,,446,eol
+446,Boatner,Byron,2023,12,21,10,38,31,11,2,0,0,2,2,0,0,4,1,8,2,0,1,0,0,0,0.7,2,MON,NABA,Monterrey,North American Baseball Association,1,,,446,eol
+127,Bolerjack,Matt,2022,10,75,74,342,321,82,13,3,5,27,34,1,2,15,5,60,0,1,11,1,0,1230,-0.6,1,SA,NABA,San Antonio,North American Baseball Association,1,,,127,eol
+127,Bolerjack,Matt,2022,10,71,57,270,257,59,9,2,2,19,26,0,0,10,2,49,0,1,9,0,0,0,-1.2,3,SA,NABA,San Antonio,North American Baseball Association,1,,,127,eol
+127,Bolerjack,Matt,2022,10,29,17,72,64,23,4,1,3,8,8,0,0,5,3,11,0,0,2,1,0,0,0.5,2,SA,NABA,San Antonio,North American Baseball Association,1,,,127,eol
+127,Bolerjack,Matt,2023,10,75,74,335,303,100,19,2,10,31,44,14,4,27,4,67,0,1,6,0,0,1251,2.5,1,SA,NABA,San Antonio,North American Baseball Association,1,,,127,eol
+127,Bolerjack,Matt,2023,10,71,60,281,260,89,15,2,9,26,35,0,0,18,2,57,0,1,5,0,0,0,2.2,3,SA,NABA,San Antonio,North American Baseball Association,1,,,127,eol
+127,Bolerjack,Matt,2023,10,21,14,54,43,11,4,0,1,5,9,0,0,9,2,10,0,0,1,0,0,0,0.3,2,SA,NABA,San Antonio,North American Baseball Association,1,,,127,eol
+611,Bove,Matt,2022,8,78,74,348,326,95,19,1,9,35,48,10,5,17,3,39,0,2,1,1,0,1152,0.8,1,ATL,NABA,Atlanta,North American Baseball Association,1,,,611,eol
+611,Bove,Matt,2022,8,76,60,290,270,79,16,0,9,33,39,0,0,15,3,33,0,2,1,1,0,0,1.0,3,ATL,NABA,Atlanta,North American Baseball Association,1,,,611,eol
+611,Bove,Matt,2022,8,25,14,58,56,16,3,1,0,2,9,0,0,2,0,6,0,0,0,0,0,0,-0.0,2,ATL,NABA,Atlanta,North American Baseball Association,1,,,611,eol
+611,Bove,Matt,2022,8,9,9,39,36,8,0,0,2,7,5,2,2,2,0,6,0,1,0,0,0,145,-0.1,21,ATL,NABA,Atlanta,North American Baseball Association,1,,,611,eol
+611,Bove,Matt,2023,8,77,74,349,322,99,20,7,13,43,50,5,7,18,3,45,0,6,2,0,0,1181,1.6,1,ATL,NABA,Atlanta,North American Baseball Association,1,,,611,eol
+611,Bove,Matt,2023,8,72,58,285,262,81,19,7,11,39,41,0,0,15,3,32,0,5,2,0,0,0,1.9,3,ATL,NABA,Atlanta,North American Baseball Association,1,,,611,eol
+611,Bove,Matt,2023,8,23,16,64,60,18,1,0,2,4,9,0,0,3,0,13,0,1,0,0,0,0,0.0,2,ATL,NABA,Atlanta,North American Baseball Association,1,,,611,eol
+123,Bowie,Dave,2022,11,58,48,214,199,36,18,2,1,22,19,5,2,11,2,53,0,2,2,0,0,759,-1.5,1,COL,NABA,Columbia,North American Baseball Association,1,,,123,eol
+123,Bowie,Dave,2022,11,53,37,171,160,30,15,2,1,21,15,0,0,8,1,46,0,2,2,0,0,0,-1.2,3,COL,NABA,Columbia,North American Baseball Association,1,,,123,eol
+123,Bowie,Dave,2022,11,22,11,43,39,6,3,0,0,1,4,0,0,3,1,7,0,0,0,0,0,0,-0.6,2,COL,NABA,Columbia,North American Baseball Association,1,,,123,eol
+123,Bowie,Dave,2023,15,11,11,49,48,13,4,1,1,15,5,0,0,1,0,12,0,0,0,0,0,193,0.1,1,RIC,NABA,Richmond,North American Baseball Association,1,,,123,eol
+123,Bowie,Dave,2023,15,11,10,46,45,13,4,1,1,15,5,0,0,1,0,11,0,0,0,0,0,0,0.3,3,RIC,NABA,Richmond,North American Baseball Association,1,,,123,eol
+123,Bowie,Dave,2023,15,1,1,3,3,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0.1,2,RIC,NABA,Richmond,North American Baseball Association,1,,,123,eol
+417,Branagan,Joe,2022,9,78,75,279,263,52,7,4,0,11,25,3,2,11,5,46,0,0,11,0,0,1022,-0.2,1,RAL,NABA,Raleigh,North American Baseball Association,1,,,417,eol
+417,Branagan,Joe,2022,9,72,63,234,219,44,6,3,0,9,23,0,0,10,5,38,0,0,9,0,0,0,-0.3,3,RAL,NABA,Raleigh,North American Baseball Association,1,,,417,eol
+417,Branagan,Joe,2022,9,24,12,45,44,8,1,1,0,2,2,0,0,1,0,8,0,0,2,0,0,0,0.6,2,RAL,NABA,Raleigh,North American Baseball Association,1,,,417,eol
+417,Branagan,Joe,2023,9,75,75,291,276,60,7,1,1,10,27,3,1,8,4,60,2,1,12,0,0,992,-0.3,1,RAL,NABA,Raleigh,North American Baseball Association,1,,,417,eol
+417,Branagan,Joe,2023,9,74,66,252,240,49,6,1,1,9,20,0,0,6,4,54,1,1,8,0,0,0,-0.7,3,RAL,NABA,Raleigh,North American Baseball Association,1,,,417,eol
+417,Branagan,Joe,2023,9,21,9,39,36,11,1,0,0,1,7,0,0,2,0,6,1,0,4,0,0,0,0.9,2,RAL,NABA,Raleigh,North American Baseball Association,1,,,417,eol
+544,Brophy,Steve,2022,1,78,76,345,294,76,20,3,17,51,57,0,0,36,14,74,0,1,5,0,0,1370,1.4,1,ORL,NABA,Orlando,North American Baseball Association,1,,,544,eol
+544,Brophy,Steve,2022,1,76,59,287,248,67,20,3,15,46,51,0,0,26,12,58,0,1,4,0,0,0,1.4,3,ORL,NABA,Orlando,North American Baseball Association,1,,,544,eol
+544,Brophy,Steve,2022,1,26,17,58,46,9,0,0,2,5,6,0,0,10,2,16,0,0,1,0,0,0,-0.7,2,ORL,NABA,Orlando,North American Baseball Association,1,,,544,eol
+544,Brophy,Steve,2022,1,9,9,44,39,9,2,0,3,7,7,0,0,4,1,13,0,0,1,0,0,165,-0.6,21,ORL,NABA,Orlando,North American Baseball Association,1,,,544,eol
+544,Brophy,Steve,2023,1,81,81,362,309,60,15,0,17,51,47,0,0,36,12,88,0,5,8,0,0,1538,-0.5,1,ORL,NABA,Orlando,North American Baseball Association,1,,,544,eol
+544,Brophy,Steve,2023,1,79,68,306,261,52,15,0,12,40,40,0,0,28,12,68,0,5,8,0,0,0,-0.6,3,ORL,NABA,Orlando,North American Baseball Association,1,,,544,eol
+544,Brophy,Steve,2023,1,26,13,56,48,8,0,0,5,11,7,0,0,8,0,20,0,0,0,0,0,0,-0.7,2,ORL,NABA,Orlando,North American Baseball Association,1,,,544,eol
+176,Brown,Matt,2022,13,14,7,30,28,7,1,0,1,1,3,1,0,2,0,9,0,0,0,0,0,130,0.0,1,SJ,NABA,San Juan,North American Baseball Association,1,,,176,eol
+176,Brown,Matt,2022,13,8,7,29,27,7,1,0,1,1,3,0,0,2,0,8,0,0,0,0,0,0,0.0,3,SJ,NABA,San Juan,North American Baseball Association,1,,,176,eol
+176,Brown,Matt,2022,13,1,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,-0.0,2,SJ,NABA,San Juan,North American Baseball Association,1,,,176,eol
+29,Brown,Matt,2022,6,79,75,345,275,71,21,1,24,74,70,1,2,63,6,93,0,1,2,0,0,1669,3.1,1,NY,NABA,New York,North American Baseball Association,1,,,29,eol
+29,Brown,Matt,2022,6,76,61,287,226,60,18,1,20,61,55,0,0,54,6,75,0,1,0,0,0,0,3.0,3,NY,NABA,New York,North American Baseball Association,1,,,29,eol
+29,Brown,Matt,2022,6,26,14,58,49,11,3,0,4,13,15,0,0,9,0,18,0,0,2,0,0,0,0.1,2,NY,NABA,New York,North American Baseball Association,1,,,29,eol
+29,Brown,Matt,2022,6,5,5,25,21,4,1,0,0,1,2,0,0,3,1,7,0,0,1,0,0,122,-0.4,21,NY,NABA,New York,North American Baseball Association,1,,,29,eol
+29,Brown,Matt,2023,6,79,74,336,286,67,20,3,16,55,50,0,1,41,5,96,0,4,5,0,0,1576,1.0,1,NY,NABA,New York,North American Baseball Association,1,,,29,eol
+29,Brown,Matt,2023,6,78,59,281,239,57,18,3,15,49,42,0,0,34,5,83,0,3,3,0,0,0,1.1,3,NY,NABA,New York,North American Baseball Association,1,,,29,eol
+29,Brown,Matt,2023,6,26,15,55,47,10,2,0,1,6,8,0,0,7,0,13,0,1,2,0,0,0,-0.5,2,NY,NABA,New York,North American Baseball Association,1,,,29,eol
+496,Buehner,Noah,2022,4,78,78,328,291,80,17,2,14,49,46,4,7,28,7,59,0,2,7,0,0,1171,0.6,1,SAC,NABA,Sacramento,North American Baseball Association,1,,,496,eol
+496,Buehner,Noah,2022,4,74,62,263,233,62,13,1,11,33,39,0,0,21,7,50,0,2,5,0,0,0,0.4,3,SAC,NABA,Sacramento,North American Baseball Association,1,,,496,eol
+496,Buehner,Noah,2022,4,33,16,65,58,18,4,1,3,16,7,0,0,7,0,9,0,0,2,0,0,0,-0.2,2,SAC,NABA,Sacramento,North American Baseball Association,1,,,496,eol
+496,Buehner,Noah,2023,4,69,68,296,273,77,22,1,12,42,35,4,6,21,1,69,0,1,6,0,0,1090,0.5,1,SAC,NABA,Sacramento,North American Baseball Association,1,,,496,eol
+496,Buehner,Noah,2023,4,65,44,213,198,58,14,1,10,29,28,0,0,13,1,49,0,1,6,0,0,0,0.6,3,SAC,NABA,Sacramento,North American Baseball Association,1,,,496,eol
+496,Buehner,Noah,2023,4,31,24,83,75,19,8,0,2,13,7,0,0,8,0,20,0,0,0,0,0,0,-0.4,2,SAC,NABA,Sacramento,North American Baseball Association,1,,,496,eol
+745,Bugden,Jim,2022,14,14,6,28,26,6,0,0,0,2,4,2,1,2,0,3,0,0,0,0,0,100,-0.2,1,MC,NABA,Mexico City,North American Baseball Association,1,,,745,eol
+745,Bugden,Jim,2022,14,11,5,26,24,5,0,0,0,2,4,0,0,2,0,3,0,0,0,0,0,0,-0.2,3,MC,NABA,Mexico City,North American Baseball Association,1,,,745,eol
+745,Bugden,Jim,2022,14,1,1,2,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,2,MC,NABA,Mexico City,North American Baseball Association,1,,,745,eol
+745,Bugden,Jim,2023,14,13,8,36,35,10,4,1,0,3,7,2,0,0,1,6,0,0,0,0,0,124,-0.1,1,MC,NABA,Mexico City,North American Baseball Association,1,,,745,eol
+745,Bugden,Jim,2023,14,4,3,6,6,1,0,0,0,0,1,0,0,0,0,2,0,0,0,0,0,0,-0.3,2,MC,NABA,Mexico City,North American Baseball Association,1,,,745,eol
+745,Bugden,Jim,2023,14,13,5,30,29,9,4,1,0,3,6,0,0,0,1,4,0,0,0,0,0,0,-0.1,3,MC,NABA,Mexico City,North American Baseball Association,1,,,745,eol
+259,Burchett,Jeff,2022,15,15,9,42,38,9,2,0,0,2,9,0,0,4,0,7,0,0,0,0,0,140,0.0,1,RIC,NABA,Richmond,North American Baseball Association,1,,,259,eol
+259,Burchett,Jeff,2022,15,13,6,32,29,6,2,0,0,2,8,0,0,3,0,5,0,0,0,0,0,0,-0.0,3,RIC,NABA,Richmond,North American Baseball Association,1,,,259,eol
+259,Burchett,Jeff,2022,15,5,3,10,9,3,0,0,0,0,1,0,0,1,0,2,0,0,0,0,0,0,0.1,2,RIC,NABA,Richmond,North American Baseball Association,1,,,259,eol
+259,Burchett,Jeff,2023,11,44,39,163,149,40,5,0,0,14,14,0,1,10,1,19,0,3,5,0,0,533,-0.3,1,COL,NABA,Columbia,North American Baseball Association,1,,,259,eol
+259,Burchett,Jeff,2023,11,38,32,139,127,34,4,0,0,11,13,0,0,8,1,16,0,3,5,0,0,0,-0.3,3,COL,NABA,Columbia,North American Baseball Association,1,,,259,eol
+259,Burchett,Jeff,2023,11,10,7,24,22,6,1,0,0,3,1,0,0,2,0,3,0,0,0,0,0,0,0.0,2,COL,NABA,Columbia,North American Baseball Association,1,,,259,eol
+270,Burnside,Zach,2022,4,14,6,33,31,4,0,1,0,5,1,0,0,1,1,11,0,0,1,0,0,122,-0.3,1,SAC,NABA,Sacramento,North American Baseball Association,1,,,270,eol
+270,Burnside,Zach,2022,4,10,4,26,24,4,0,1,0,5,1,0,0,1,1,6,0,0,1,0,0,0,-0.2,3,SAC,NABA,Sacramento,North American Baseball Association,1,,,270,eol
+270,Burnside,Zach,2022,4,3,2,7,7,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,-0.2,2,SAC,NABA,Sacramento,North American Baseball Association,1,,,270,eol
+270,Burnside,Zach,2023,4,15,0,18,15,3,0,0,0,1,3,0,0,2,1,5,0,0,0,0,0,66,-0.1,1,SAC,NABA,Sacramento,North American Baseball Association,1,,,270,eol
+270,Burnside,Zach,2023,4,5,0,5,5,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,-0.2,2,SAC,NABA,Sacramento,North American Baseball Association,1,,,270,eol
+270,Burnside,Zach,2023,4,10,0,13,10,3,0,0,0,1,3,0,0,2,1,4,0,0,0,0,0,0,0.0,3,SAC,NABA,Sacramento,North American Baseball Association,1,,,270,eol
+15,Burr,Pete,2022,10,20,19,73,71,14,2,0,2,9,8,0,0,1,1,20,0,0,2,0,0,262,-0.4,1,SA,NABA,San Antonio,North American Baseball Association,1,,,15,eol
+15,Burr,Pete,2022,10,19,18,66,64,11,2,0,1,4,6,0,0,1,1,17,0,0,2,0,0,0,-0.5,3,SA,NABA,San Antonio,North American Baseball Association,1,,,15,eol
+15,Burr,Pete,2022,10,5,1,7,7,3,0,0,1,5,2,0,0,0,0,3,0,0,0,0,0,0,0.1,2,SA,NABA,San Antonio,North American Baseball Association,1,,,15,eol
+15,Burr,Pete,2023,10,57,51,202,183,37,10,1,2,12,18,1,1,16,2,41,0,0,8,0,1,768,-0.2,1,SA,NABA,San Antonio,North American Baseball Association,1,,,15,eol
+15,Burr,Pete,2023,10,53,42,172,155,30,8,1,1,10,14,0,0,14,2,35,0,0,7,0,1,0,-0.0,3,SA,NABA,San Antonio,North American Baseball Association,1,,,15,eol
+15,Burr,Pete,2023,10,15,9,30,28,7,2,0,1,2,4,0,0,2,0,6,0,0,1,0,0,0,0.7,2,SA,NABA,San Antonio,North American Baseball Association,1,,,15,eol
+21,Bybee,Matt,2022,3,75,75,276,259,70,19,2,3,29,33,3,3,10,4,33,2,1,5,0,0,882,1.1,1,NOV,NABA,NOVA,North American Baseball Association,1,,,21,eol
+21,Bybee,Matt,2022,3,69,57,216,206,51,13,2,2,21,22,0,0,6,3,25,1,0,3,0,0,0,0.5,3,NOV,NABA,NOVA,North American Baseball Association,1,,,21,eol
+21,Bybee,Matt,2022,3,32,18,60,53,19,6,0,1,8,11,0,0,4,1,8,1,1,2,0,0,0,1.3,2,NOV,NABA,NOVA,North American Baseball Association,1,,,21,eol
+21,Bybee,Matt,2022,3,5,5,17,16,4,2,1,0,5,1,0,0,0,0,1,0,1,0,0,0,59,0.8,21,NOV,NABA,NOVA,North American Baseball Association,1,,,21,eol
+21,Bybee,Matt,2023,3,42,18,73,71,16,6,1,0,8,10,1,0,0,2,7,0,0,4,0,0,248,-0.3,1,NOV,NABA,NOVA,North American Baseball Association,1,,,21,eol
+21,Bybee,Matt,2023,3,10,5,21,20,7,2,1,0,5,3,0,0,0,1,4,0,0,0,0,0,0,0.1,2,NOV,NABA,NOVA,North American Baseball Association,1,,,21,eol
+21,Bybee,Matt,2023,3,19,13,52,51,9,4,0,0,3,7,0,0,0,1,3,0,0,4,0,0,0,-0.5,3,NOV,NABA,NOVA,North American Baseball Association,1,,,21,eol
+320,Cabrera,Ruben,2022,15,25,18,90,86,19,3,0,3,11,8,0,0,4,0,16,0,0,1,0,0,314,-0.5,1,RIC,NABA,Richmond,North American Baseball Association,1,,,320,eol
+320,Cabrera,Ruben,2022,15,18,13,43,40,8,1,0,2,5,5,0,0,3,0,10,0,0,1,0,0,0,-0.3,2,RIC,NABA,Richmond,North American Baseball Association,1,,,320,eol
+320,Cabrera,Ruben,2022,15,22,5,47,46,11,2,0,1,6,3,0,0,1,0,6,0,0,0,0,0,0,-0.3,3,RIC,NABA,Richmond,North American Baseball Association,1,,,320,eol
+320,Cabrera,Ruben,2023,15,3,2,10,8,2,1,0,0,0,1,0,0,2,0,2,0,0,1,0,0,36,-0.0,1,RIC,NABA,Richmond,North American Baseball Association,1,,,320,eol
+320,Cabrera,Ruben,2023,15,2,2,5,3,2,1,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0.1,2,RIC,NABA,Richmond,North American Baseball Association,1,,,320,eol
+320,Cabrera,Ruben,2023,15,3,0,5,5,0,0,0,0,0,0,0,0,0,0,2,0,0,1,0,0,0,-0.2,3,RIC,NABA,Richmond,North American Baseball Association,1,,,320,eol
+218,Calabro,Nate,2022,2,77,76,318,292,76,16,1,10,27,51,10,4,24,1,57,0,1,0,0,0,1149,2.0,1,KC,NABA,Kansas City,North American Baseball Association,1,,,218,eol
+218,Calabro,Nate,2022,2,25,13,51,49,17,4,0,2,6,9,0,0,2,0,10,0,0,0,0,0,0,1.1,2,KC,NABA,Kansas City,North American Baseball Association,1,,,218,eol
+218,Calabro,Nate,2022,2,75,63,267,243,59,12,1,8,21,42,0,0,22,1,47,0,1,0,0,0,0,1.0,3,KC,NABA,Kansas City,North American Baseball Association,1,,,218,eol
+218,Calabro,Nate,2023,2,76,74,304,269,78,14,0,10,28,44,17,5,29,4,49,0,2,6,0,0,1103,2.6,1,KC,NABA,Kansas City,North American Baseball Association,1,,,218,eol
+218,Calabro,Nate,2023,2,69,56,244,214,64,12,0,9,26,38,0,0,24,4,38,0,2,6,0,0,0,2.0,3,KC,NABA,Kansas City,North American Baseball Association,1,,,218,eol
+218,Calabro,Nate,2023,2,24,18,60,55,14,2,0,1,2,6,0,0,5,0,11,0,0,0,0,0,0,0.4,2,KC,NABA,Kansas City,North American Baseball Association,1,,,218,eol
+747,Camara,Aaron,2022,14,53,48,213,203,81,27,3,6,39,33,4,4,7,3,22,0,0,1,0,0,655,2.7,1,MC,NABA,Mexico City,North American Baseball Association,1,,,747,eol
+747,Camara,Aaron,2022,14,50,39,182,174,67,24,3,5,32,27,0,0,6,2,18,0,0,1,0,0,0,2.4,3,MC,NABA,Mexico City,North American Baseball Association,1,,,747,eol
+747,Camara,Aaron,2022,14,16,9,31,29,14,3,0,1,7,6,0,0,1,1,4,0,0,0,0,0,0,0.8,2,MC,NABA,Mexico City,North American Baseball Association,1,,,747,eol
+747,Camara,Aaron,2022,14,1,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,5,0.2,21,MC,NABA,Mexico City,North American Baseball Association,1,,,747,eol
+747,Camara,Aaron,2023,14,72,69,332,315,106,33,1,8,51,57,12,5,15,1,26,0,1,6,1,0,1035,2.5,1,MC,NABA,Mexico City,North American Baseball Association,1,,,747,eol
+747,Camara,Aaron,2023,14,23,13,50,49,14,8,0,1,5,10,0,0,1,0,4,0,0,2,0,0,0,0.6,2,MC,NABA,Mexico City,North American Baseball Association,1,,,747,eol
+747,Camara,Aaron,2023,14,70,56,282,266,92,25,1,7,46,47,0,0,14,1,22,0,1,4,1,0,0,2.4,3,MC,NABA,Mexico City,North American Baseball Association,1,,,747,eol
+118,Canto,Jose,2022,15,67,64,255,236,55,9,1,4,22,24,6,2,16,2,42,1,0,5,0,0,836,-0.1,1,RIC,NABA,Richmond,North American Baseball Association,1,,,118,eol
+118,Canto,Jose,2022,15,61,49,204,190,43,8,1,4,18,22,0,0,11,2,31,1,0,4,0,0,0,0.0,3,RIC,NABA,Richmond,North American Baseball Association,1,,,118,eol
+118,Canto,Jose,2022,15,26,15,51,46,12,1,0,0,4,2,0,0,5,0,11,0,0,1,0,0,0,0.4,2,RIC,NABA,Richmond,North American Baseball Association,1,,,118,eol
+118,Canto,Jose,2023,15,48,26,102,99,27,8,1,0,6,8,0,2,2,1,16,0,0,1,0,0,335,-0.2,1,RIC,NABA,Richmond,North American Baseball Association,1,,,118,eol
+118,Canto,Jose,2023,15,32,23,93,90,25,7,1,0,6,8,0,0,2,1,15,0,0,1,0,0,0,-0.2,3,RIC,NABA,Richmond,North American Baseball Association,1,,,118,eol
+118,Canto,Jose,2023,15,5,3,9,9,2,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,-0.2,2,RIC,NABA,Richmond,North American Baseball Association,1,,,118,eol
+697,Canton,Jorge,2022,4,74,74,350,321,79,11,2,10,31,56,5,7,23,5,72,0,1,7,0,0,1356,0.1,1,SAC,NABA,Sacramento,North American Baseball Association,1,,,697,eol
+697,Canton,Jorge,2022,4,69,59,289,267,68,10,2,9,30,49,0,0,16,5,61,0,1,5,0,0,0,0.4,3,SAC,NABA,Sacramento,North American Baseball Association,1,,,697,eol
+697,Canton,Jorge,2022,4,25,15,61,54,11,1,0,1,1,7,0,0,7,0,11,0,0,2,0,0,0,-0.1,2,SAC,NABA,Sacramento,North American Baseball Association,1,,,697,eol
+697,Canton,Jorge,2023,4,66,60,291,259,72,13,3,7,28,35,10,6,28,3,73,0,1,4,4,0,1129,0.5,1,SAC,NABA,Sacramento,North American Baseball Association,1,,,697,eol
+697,Canton,Jorge,2023,4,60,36,200,179,45,8,2,5,20,23,0,0,19,1,52,0,1,3,4,0,0,-0.1,3,SAC,NABA,Sacramento,North American Baseball Association,1,,,697,eol
+697,Canton,Jorge,2023,4,31,24,91,80,27,5,1,2,8,12,0,0,9,2,21,0,0,1,0,0,0,0.5,2,SAC,NABA,Sacramento,North American Baseball Association,1,,,697,eol
+405,Castaneda,Ivan,2022,16,77,74,311,281,70,22,2,4,24,44,8,3,25,2,44,0,3,2,2,0,1063,0.5,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,405,eol
+405,Castaneda,Ivan,2022,16,76,57,252,224,58,18,1,3,19,36,0,0,25,1,31,0,2,2,2,0,0,0.4,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,405,eol
+405,Castaneda,Ivan,2022,16,25,17,59,57,12,4,1,1,5,8,0,0,0,1,13,0,1,0,0,0,0,-0.2,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,405,eol
+405,Castaneda,Ivan,2022,16,11,11,45,44,9,6,0,1,3,6,0,0,1,0,8,0,0,1,0,0,140,-0.1,21,HAM,NABA,Hamilton,North American Baseball Association,1,,,405,eol
+405,Castaneda,Ivan,2023,16,76,74,326,301,80,15,5,5,37,47,10,4,18,6,59,0,1,5,2,0,1129,0.7,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,405,eol
+405,Castaneda,Ivan,2023,16,32,24,69,66,18,0,1,3,8,9,0,0,1,1,16,0,1,1,0,0,0,0.5,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,405,eol
+405,Castaneda,Ivan,2023,16,74,50,257,235,62,15,4,2,29,38,0,0,17,5,43,0,0,4,2,0,0,0.7,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,405,eol
+28,Castro,Jerry,2022,16,74,74,273,251,79,26,2,2,37,37,6,2,17,4,34,0,1,9,0,0,942,1.4,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,28,eol
+28,Castro,Jerry,2022,16,68,56,216,198,61,18,2,1,32,30,0,0,13,4,27,0,1,8,0,0,0,0.9,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,28,eol
+28,Castro,Jerry,2022,16,27,18,57,53,18,8,0,1,5,7,0,0,4,0,7,0,0,1,0,0,0,0.5,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,28,eol
+28,Castro,Jerry,2022,16,11,11,44,38,8,1,0,0,2,7,0,0,5,1,5,0,0,1,0,0,161,-0.0,21,HAM,NABA,Hamilton,North American Baseball Association,1,,,28,eol
+28,Castro,Jerry,2023,16,36,36,132,122,24,9,0,0,11,11,3,0,7,1,25,0,2,2,0,0,469,-0.4,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,28,eol
+28,Castro,Jerry,2023,16,16,13,35,31,6,2,0,0,2,1,0,0,4,0,7,0,0,0,0,0,0,0.1,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,28,eol
+28,Castro,Jerry,2023,16,32,23,97,91,18,7,0,0,9,10,0,0,3,1,18,0,2,2,0,0,0,-0.4,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,28,eol
+558,Chapman,Markus,2023,3,64,64,257,231,57,10,1,0,17,36,2,2,15,8,45,1,2,6,0,0,956,-0.5,1,NOV,NABA,NOVA,North American Baseball Association,1,,,558,eol
+558,Chapman,Markus,2023,3,64,62,237,215,53,9,0,0,13,34,0,0,13,7,37,1,1,6,0,0,0,-0.3,3,NOV,NABA,NOVA,North American Baseball Association,1,,,558,eol
+558,Chapman,Markus,2023,3,16,2,20,16,4,1,1,0,4,2,0,0,2,1,8,0,1,0,0,0,0,0.2,2,NOV,NABA,NOVA,North American Baseball Association,1,,,558,eol
+408,Chapman,Milt,2022,5,17,14,60,54,18,3,0,2,6,10,0,2,3,2,13,0,1,2,0,0,239,0.5,1,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,408,eol
+408,Chapman,Milt,2022,5,16,8,40,36,13,3,0,1,4,5,0,0,1,2,6,0,1,1,0,0,0,0.5,3,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,408,eol
+408,Chapman,Milt,2022,5,8,6,20,18,5,0,0,1,2,5,0,0,2,0,7,0,0,1,0,0,0,0.2,2,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,408,eol
+408,Chapman,Milt,2023,5,17,11,47,45,10,4,0,1,2,4,1,0,2,0,8,0,0,1,0,0,165,-0.1,1,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,408,eol
+408,Chapman,Milt,2023,5,16,9,38,37,8,3,0,1,2,4,0,0,1,0,8,0,0,1,0,0,0,-0.1,3,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,408,eol
+408,Chapman,Milt,2023,5,4,2,9,8,2,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0.0,2,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,408,eol
+511,Clark,Pete,2022,6,77,74,367,353,109,30,3,1,25,61,17,4,13,1,43,0,0,8,0,0,1161,1.8,1,NY,NABA,New York,North American Baseball Association,1,,,511,eol
+511,Clark,Pete,2022,6,74,61,309,295,89,25,1,1,22,51,0,0,13,1,35,0,0,5,0,0,0,1.2,3,NY,NABA,New York,North American Baseball Association,1,,,511,eol
+511,Clark,Pete,2022,6,25,13,58,58,20,5,2,0,3,10,0,0,0,0,8,0,0,3,0,0,0,0.9,2,NY,NABA,New York,North American Baseball Association,1,,,511,eol
+511,Clark,Pete,2022,6,5,5,25,25,9,1,1,1,4,6,1,1,0,0,4,0,0,0,0,0,86,0.8,21,NY,NABA,New York,North American Baseball Association,1,,,511,eol
+511,Clark,Pete,2023,6,75,74,347,323,99,29,4,0,40,60,17,4,17,4,44,0,3,9,0,0,1099,1.7,1,NY,NABA,New York,North American Baseball Association,1,,,511,eol
+511,Clark,Pete,2023,6,74,60,294,276,88,28,4,0,33,54,0,0,15,3,37,0,0,7,0,0,0,1.3,3,NY,NABA,New York,North American Baseball Association,1,,,511,eol
+511,Clark,Pete,2023,6,27,14,53,47,11,1,0,0,7,6,0,0,2,1,7,0,3,2,0,0,0,-0.3,2,NY,NABA,New York,North American Baseball Association,1,,,511,eol
+267,Cobos,Alex,2022,12,78,75,334,306,87,20,1,19,53,51,0,1,21,6,48,0,1,6,2,0,1301,1.8,1,MON,NABA,Monterrey,North American Baseball Association,1,,,267,eol
+267,Cobos,Alex,2022,12,75,59,272,250,75,16,1,16,46,42,0,0,16,5,38,0,1,5,2,0,0,1.5,3,MON,NABA,Monterrey,North American Baseball Association,1,,,267,eol
+267,Cobos,Alex,2022,12,25,16,62,56,12,4,0,3,7,9,0,0,5,1,10,0,0,1,0,0,0,-0.3,2,MON,NABA,Monterrey,North American Baseball Association,1,,,267,eol
+267,Cobos,Alex,2023,12,79,74,338,292,95,25,2,18,45,53,0,1,39,6,45,0,1,9,11,0,1229,3.0,1,MON,NABA,Monterrey,North American Baseball Association,1,,,267,eol
+267,Cobos,Alex,2023,12,74,58,274,241,78,19,2,16,38,47,0,0,30,2,33,0,1,8,10,0,0,2.2,3,MON,NABA,Monterrey,North American Baseball Association,1,,,267,eol
+267,Cobos,Alex,2023,12,27,16,64,51,17,6,0,2,7,6,0,0,9,4,12,0,0,1,1,0,0,0.5,2,MON,NABA,Monterrey,North American Baseball Association,1,,,267,eol
+512,Cole,Jayden,2022,16,77,73,351,322,89,16,2,17,45,67,22,7,21,2,49,0,6,2,0,0,1220,1.7,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,512,eol
+512,Cole,Jayden,2022,16,75,58,290,265,77,15,2,14,37,57,0,0,17,2,38,0,6,2,0,0,0,1.4,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,512,eol
+512,Cole,Jayden,2022,16,23,15,61,57,12,1,0,3,8,10,0,0,4,0,11,0,0,0,0,0,0,-0.1,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,512,eol
+512,Cole,Jayden,2022,16,11,11,53,48,14,2,0,2,5,12,3,1,5,0,6,0,0,2,0,0,196,0.3,21,HAM,NABA,Hamilton,North American Baseball Association,1,,,512,eol
+512,Cole,Jayden,2023,16,74,74,365,329,86,18,5,9,44,56,11,6,30,1,72,0,5,3,0,0,1363,1.5,1,HAM,NABA,Hamilton,North American Baseball Association,1,,,512,eol
+512,Cole,Jayden,2023,16,28,22,80,76,17,3,1,2,14,11,0,0,2,0,16,0,2,0,0,0,0,0.4,2,HAM,NABA,Hamilton,North American Baseball Association,1,,,512,eol
+512,Cole,Jayden,2023,16,70,52,285,253,69,15,4,7,30,45,0,0,28,1,56,0,3,3,0,0,0,1.7,3,HAM,NABA,Hamilton,North American Baseball Association,1,,,512,eol
+551,Collins,Jimmy,2022,5,74,74,320,290,80,21,0,15,39,43,0,1,26,2,72,0,2,8,0,0,1232,1.3,1,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,551,eol
+551,Collins,Jimmy,2022,5,73,57,261,238,66,17,0,13,33,35,0,0,19,2,55,0,2,8,0,0,0,1.3,3,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,551,eol
+551,Collins,Jimmy,2022,5,25,17,59,52,14,4,0,2,6,8,0,0,7,0,17,0,0,0,0,0,0,0.2,2,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,551,eol
+551,Collins,Jimmy,2022,5,5,5,19,18,1,0,0,1,1,1,0,0,1,0,3,0,0,0,0,0,73,-0.3,21,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,551,eol
+551,Collins,Jimmy,2023,5,75,75,323,295,69,22,1,14,43,41,0,0,25,2,75,0,1,7,0,0,1225,0.5,1,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,551,eol
+551,Collins,Jimmy,2023,5,72,60,268,243,55,17,0,12,34,37,0,0,23,1,61,0,1,5,0,0,0,0.8,3,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,551,eol
+551,Collins,Jimmy,2023,5,26,15,55,52,14,5,1,2,9,4,0,0,2,1,14,0,0,2,0,0,0,0.6,2,SLC,NABA,Salt Lake City,North American Baseball Association,1,,,551,eol

@@ -1,18 +1,13 @@
 <script lang="ts" setup>
-const props = defineProps<{
+interface TableProps {
   items: any[];
+  /** the key of the item to use as the row key */
+  itemKey?: string;
   headers: any[];
-}>();
-
-const people = [
-  {
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    email: "lindsay.walton@example.com",
-    role: "Member",
-  },
-  // More people...
-];
+}
+const props = withDefaults(defineProps<TableProps>(), {
+  itemKey: "id",
+});
 </script>
 <template>
   <div class="sm:px-6 lg:px-8 px-4">

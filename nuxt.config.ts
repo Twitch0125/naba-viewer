@@ -17,6 +17,15 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  vite: {
+    test: {
+      include: ["test/**/*.test.ts"],
+      environment: "happy-dom",
+      deps: {
+        inline: ["@vue", "@vueuse", "@headlessui", "@nuxt/test-utils-edge"],
+      },
+    },
+  },
   experimental: {
     reactivityTransform: true,
   },

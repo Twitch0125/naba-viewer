@@ -10,6 +10,6 @@ const headers = computed(() => {
       <p class="my-6">Drag and drop the data dump here</p>
       <BattingFileUpload />
     </div>
-    <!-- <Table v-if="players" :items="players" :headers="headers" /> -->
+    <BattingTable />
   </div>
 </template>
