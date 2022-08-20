@@ -4,9 +4,11 @@ import { BattingPlayer, BattingStats, BattingStatsMap } from "~~/types";
 //use players from the store as table items
 const battingStore = useBattingStore();
 const items = $computed<BattingPlayer[]>(() => battingStore.players);
-//use keys from the first player object to find the headers
-const headers = $computed(() => Object.keys(items[0]));
-const itemKey: keyof BattingPlayer = BattingStatsMap[BattingStats.OOTPpID];
+const selectedHeaders = $computed<string[]>(
+  () => battingStore.configuredHeaders
+);
+
+const itemKey: keyof BattingPlayer = BattingStatsMap[BattingStats.playerID];
 </script>
 
 <template>
@@ -14,6 +16,6 @@ const itemKey: keyof BattingPlayer = BattingStatsMap[BattingStats.OOTPpID];
     v-if="items.length"
     :items="items"
     :item-key="itemKey"
-    :headers="headers"
+    :headers="selectedHeaders"
   />
 </template>

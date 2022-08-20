@@ -17,33 +17,52 @@ export async function parseCSVFile<PlayerType extends any[], ReturnType>(
 }> {
   const reader = new FileReader();
   const parsePromise = new Promise<{ data: PlayerType }>((resolve, reject) => {
-    reader.addEventListener("load", () => {
-      const parsedCSV = Papa.parse<PlayerType>(reader.result as string, {
-        dynamicTyping: true,
-        comments: "//",
-        skipEmptyLines: true,
-        transform(val, field) {
-          if (val === "eol") {
-            return REMOVE_TOKEN;
-          } else return val;
-        },
-      });
-      const { data, errors } = parsedCSV;
-      if (errors.length) {
-        console.error("Error", errors);
-        reject(errors);
-      }
-      //remove the 'eol' at the end of each row
-      const filteredData = data.map((row) => {
-        return row.filter((val) => val !== REMOVE_TOKEN);
-      });
-      if (transform) {
-        resolve({ data: filteredData.map(transform) });
-      }
-      resolve({ data: filteredData });
+    const transforms = [
+      (data: string[]) => {
+        return data.filter((val) => val !== "eol");
+      },
+    ];
+    transform && transforms.push(transform);
+    reader.addEventListener("load", async () => {
+      const parsedCSV = await parseCSV<PlayerType>(
+        reader.result as string,
+        transforms
+      );
+      parsedCSV;
+      resolve({ data: parsedCSV });
     });
     reader.readAsBinaryString(unref(file));
   });
   const result = await parsePromise;
   return result;
+}
+
+/** offload parse operation to a worker with PapaParse. returns transformed data */
+function parseCSV<PlayerType extends any[]>(
+  result: string,
+  transforms = []
+): Promise<PlayerType> {
+  return new Promise((resolve, reject) => {
+    const parsedRows = [];
+    Papa.parse<PlayerType>(result as string, {
+      dynamicTyping: true,
+      comments: "//",
+      skipEmptyLines: true,
+      worker: true,
+      step({ data, errors }) {
+        if (errors.length > 0) {
+          reject(errors);
+          return;
+        }
+        //run data through each transform function
+        const transformedData = transforms.reduce((data, transformer) => {
+          return transformer(data);
+        }, data);
+        parsedRows.push(transformedData);
+      },
+      complete() {
+        resolve(parsedRows);
+      },
+    });
+  });
 }

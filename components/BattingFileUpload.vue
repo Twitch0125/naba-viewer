@@ -11,7 +11,7 @@ watch(file, async (file) => {
     const { data: players } = await parseCSVFile<BattingStats[], BattingPlayer>(
       file,
       {
-        transform: (row): BattingPlayer => {
+        transform: (row: any[]): BattingPlayer => {
           return row.reduce((rowObj, stat, index) => {
             let key = BattingStatsMap[index];
             rowObj[key] = stat;

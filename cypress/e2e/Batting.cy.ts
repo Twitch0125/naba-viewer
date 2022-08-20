@@ -2,7 +2,7 @@
 describe("Batting", () => {
   beforeEach(() => {
     //visit page
-    cy.visit("http://localhost:3000");
+    cy.visit("http://localhost:3000/batting");
   });
   const checkForTable = () => {
     //checking for stats table
