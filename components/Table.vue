@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { TableHeader } from "./Table";
-import { UseVirtualList } from "@vueuse/components";
 
 interface TableProps {
   items: any[];
@@ -12,10 +11,6 @@ const props = withDefaults(defineProps<TableProps>(), {
   itemKey: "id",
   headers: () => [],
 });
-
-const { containerProps, list, wrapperProps } = useVirtualList(props.items, {
-  itemHeight: 24,
-});
 </script>
 
 <template>
@@ -24,11 +19,7 @@ const { containerProps, list, wrapperProps } = useVirtualList(props.items, {
       <div class="sm:-mx-6 lg:-mx-8 -mx-4 -my-2">
         <div class="inline-block min-w-full py-2 align-middle">
           <div class="ring-1 ring-black ring-opacity-5 shadow-sm">
-            <table
-              v-bind="containerProps"
-              class="min-w-full border-separate"
-              style="border-spacing: 0; height: 320px"
-            >
+            <table class="min-w-full border-separate" style="border-spacing: 0">
               <thead class="bg-gray-50">
                 <tr>
                   <th
@@ -39,23 +30,17 @@ const { containerProps, list, wrapperProps } = useVirtualList(props.items, {
                   </th>
                 </tr>
               </thead>
-              <tbody
-                v-bind="wrapperProps"
-                class="bg-white"
-                :style="{ height: '320px' }"
-              >
+              <tbody class="bg-white">
                 <tr
-                  v-for="(item, itemIndex) in list"
-                  :key="itemKey ? item.data[itemKey] : item.data.id"
+                  v-for="(item, itemIndex) in items"
+                  :key="itemKey ? item[itemKey] : item.id"
                 >
                   <td
                     v-for="header in headers"
                     class="first:pl-6 last:pr-6"
-                    :key="`${itemKey ? item.data[itemKey] : item.data.id}-${
-                      header.name
-                    }`"
+                    :key="`${itemKey ? item[itemKey] : item.id}-${header.name}`"
                   >
-                    {{ item.data[header.name] }}
+                    {{ item[header.name] }}
                   </td>
                 </tr>
               </tbody>
