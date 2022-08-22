@@ -10,6 +10,7 @@ specifiers:
   '@testing-library/vue': ^6.6.1
   '@types/papaparse': ^5.3.3
   '@vitejs/plugin-vue': ^3.0.3
+  '@vueuse/components': ^9.1.0
   '@vueuse/core': ^9.1.0
   '@vueuse/nuxt': ^9.1.0
   cypress: ^10.6.0
@@ -29,6 +30,7 @@ devDependencies:
   '@testing-library/vue': 6.6.1_2yymnzrok6eda47acnj2yjm3ae
   '@types/papaparse': 5.3.3
   '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
+  '@vueuse/components': 9.1.0_vue@3.2.37
   '@vueuse/core': 9.1.0_vue@3.2.37
   '@vueuse/nuxt': 9.1.0_wunwi6ddsd7fr5iivtkpuipski
   cypress: 10.6.0
@@ -1331,6 +1333,17 @@ packages:
       vue: ^3.0.1
     dependencies:
       vue: 3.2.37
+    dev: true
+
+  /@vueuse/components/9.1.0_vue@3.2.37:
+    resolution: {integrity: sha512-8LeCIYZSzQBNlgEWwVmxT9Zs4desJO7w/7gFcq9XT5kEzPs8AsUnAfFSK8fasvgpD2Fu0NtzXnaiFYkKZsSFLQ==}
+    dependencies:
+      '@vueuse/core': 9.1.0_vue@3.2.37
+      '@vueuse/shared': 9.1.0_vue@3.2.37
+      vue-demi: 0.13.8_vue@3.2.37
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: true
 
   /@vueuse/core/9.1.0_vue@3.2.37:

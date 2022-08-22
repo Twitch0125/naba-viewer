@@ -17,6 +17,7 @@
     "@testing-library/vue": "^6.6.1",
     "@types/papaparse": "^5.3.3",
     "@vitejs/plugin-vue": "^3.0.3",
+    "@vueuse/components": "^9.1.0",
     "@vueuse/core": "^9.1.0",
     "@vueuse/nuxt": "^9.1.0",
     "cypress": "^10.6.0",

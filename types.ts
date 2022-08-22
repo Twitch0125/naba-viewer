@@ -1,5 +1,6 @@
 // batting
 
+//given a CSV from Out of the Park, these are the indexes for the fields
 export enum BattingStats {
   playerID = 0,
   lastName = 1,
@@ -39,44 +40,9 @@ export enum BattingStats {
   OOTPpID = 35,
 }
 
-export interface BattingStatsHeaders {
-  [BattingStats.playerID]: "player ID";
-  [BattingStats.lastName]: "lastname";
-  [BattingStats.firstName]: "firstname";
-  [BattingStats.year]: "year";
-  [BattingStats.teamID]: "team ID";
-  [BattingStats.g]: "g";
-  [BattingStats.gs]: "gs";
-  [BattingStats.pa]: "pa";
-  [BattingStats.ab]: "ab";
-  [BattingStats.h]: "h";
-  [BattingStats.secondBase]: "2b";
-  [BattingStats.thirdBase]: "3b";
-  [BattingStats.hr]: "hr";
-  [BattingStats.rbi]: "rbi";
-  [BattingStats.r]: "r";
-  [BattingStats.sb]: "sb";
-  [BattingStats.cs]: "cs";
-  [BattingStats.bb]: "bb";
-  [BattingStats.hp]: "hp";
-  [BattingStats.k]: "k";
-  [BattingStats.sh]: "sh";
-  [BattingStats.sf]: "sf";
-  [BattingStats.gdp]: "gdp";
-  [BattingStats.ibb]: "ibb";
-  [BattingStats.ci]: "ci";
-  [BattingStats.pitchesSeen]: "pitches seen";
-  [BattingStats.vorp]: "vorp";
-  [BattingStats.split_id]: "split_id";
-  [BattingStats.team_abbr]: "team_abbr";
-  [BattingStats.league_abbr]: "league_abbr";
-  [BattingStats.team_name]: "team_name";
-  [BattingStats.league_name]: "league_name";
-  [BattingStats.league_level_id]: "league_level_id";
-  [BattingStats.bbrefid]: "bbrefid";
-  [BattingStats.bbrefminorid]: "bbrefminorid";
-  [BattingStats.OOTPpID]: "OOTP pID";
-}
+export type BattingStatsHeaders = {
+  [key in BattingStats]: string | number;
+};
 
 export const BattingStatsMap: BattingStatsHeaders = {
   [BattingStats.playerID]: "player ID",
@@ -117,4 +83,102 @@ export const BattingStatsMap: BattingStatsHeaders = {
   [BattingStats.OOTPpID]: "OOTP pID",
 };
 
-export type BattingPlayer = Record<BattingStatsHeaders[BattingStats], any>;
+export const BattingStatsDetails = {
+  [BattingStats.playerID]: {
+    name: "player ID",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.lastName]: {
+    name: "lastname",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.firstName]: {
+    name: "firstname",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.year]: { name: "year", display: "tbd", description: "tbd" },
+  [BattingStats.teamID]: {
+    name: "team ID",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.g]: { name: "g", display: "tbd", description: "tbd" },
+  [BattingStats.gs]: { name: "gs", display: "tbd", description: "tbd" },
+  [BattingStats.pa]: { name: "pa", display: "tbd", description: "tbd" },
+  [BattingStats.ab]: { name: "ab", display: "tbd", description: "tbd" },
+  [BattingStats.h]: { name: "h", display: "tbd", description: "tbd" },
+  [BattingStats.secondBase]: { name: "2b", display: "tbd", description: "tbd" },
+  [BattingStats.thirdBase]: { name: "3b", display: "tbd", description: "tbd" },
+  [BattingStats.hr]: { name: "hr", display: "tbd", description: "tbd" },
+  [BattingStats.rbi]: { name: "rbi", display: "tbd", description: "tbd" },
+  [BattingStats.r]: { name: "r", display: "tbd", description: "tbd" },
+  [BattingStats.sb]: { name: "sb", display: "tbd", description: "tbd" },
+  [BattingStats.cs]: { name: "cs", display: "tbd", description: "tbd" },
+  [BattingStats.bb]: { name: "bb", display: "tbd", description: "tbd" },
+  [BattingStats.hp]: { name: "hp", display: "tbd", description: "tbd" },
+  [BattingStats.k]: { name: "k", display: "tbd", description: "tbd" },
+  [BattingStats.sh]: { name: "sh", display: "tbd", description: "tbd" },
+  [BattingStats.sf]: { name: "sf", display: "tbd", description: "tbd" },
+  [BattingStats.gdp]: { name: "gdp", display: "tbd", description: "tbd" },
+  [BattingStats.ibb]: { name: "ibb", display: "tbd", description: "tbd" },
+  [BattingStats.ci]: { name: "ci", display: "tbd", description: "tbd" },
+  [BattingStats.pitchesSeen]: {
+    name: "pitches seen",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.vorp]: { name: "vorp", display: "tbd", description: "tbd" },
+  [BattingStats.split_id]: {
+    name: "split_id",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.team_abbr]: {
+    name: "team_abbr",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.league_abbr]: {
+    name: "league_abbr",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.team_name]: {
+    name: "team_name",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.league_name]: {
+    name: "league_name",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.league_level_id]: {
+    name: "league_level_id",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.bbrefid]: {
+    name: "bbrefid",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.bbrefminorid]: {
+    name: "bbrefminorid",
+    display: "tbd",
+    description: "tbd",
+  },
+  [BattingStats.OOTPpID]: {
+    name: "OOTP pID",
+    display: "tbd",
+    description: "tbd",
+  },
+};
+
+export type BattingPlayer = Record<
+  BattingStatsHeaders[BattingStats] & { id: string },
+  any
+>;
