@@ -50,7 +50,7 @@ export const useBattingStore = defineStore("battingStore", () => {
   //   "OOTP pID",
   // ];
   const configuredHeaders = ref(headers);
-  configuredHeaders.value = [...headers].slice(0, -4); // remove last 4 columns
+  configuredHeaders.value = [...headers].slice(0, -5); // remove last 5 columns
   return {
     players,
     configuredHeaders,
