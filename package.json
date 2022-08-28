@@ -21,6 +21,7 @@
     "@vueuse/core": "^9.1.0",
     "@vueuse/nuxt": "^9.1.0",
     "cypress": "^10.6.0",
+    "daisyui": "^2.24.0",
     "happy-dom": "^6.0.4",
     "nuxt": "3.0.0-rc.8",
     "papaparse": "^5.3.2",

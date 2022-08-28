@@ -27,7 +27,6 @@ const dropHandler = (event: DragEvent) => {
   dataModel.value = event.dataTransfer.files[0];
 };
 const inputHandler = (event: Event) => {
-  console.log("inputHandler", event);
   dragCounter = 0;
   dragging = false;
   dataModel.value = event.target.files[0]; //don't know what to tell ya typescript. Files exists on it
@@ -45,12 +44,14 @@ const inputHandler = (event: Event) => {
     >
       <div
         :class="`w-full flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md ${
-          dragging ? 'bg-gray-900' : ''
+          dragging
+            ? 'bg-primary-focus text-primary-content'
+            : 'bg-primary bg-opacity-5 text-primary'
         }`"
       >
         <div class="space-y-1 text-center">
           <svg
-            class="w-12 h-12 mx-auto text-gray-400"
+            class="w-12 h-12 mx-auto"
             stroke="currentColor"
             fill="none"
             viewBox="0 0 48 48"
@@ -63,10 +64,10 @@ const inputHandler = (event: Event) => {
               stroke-linejoin="round"
             />
           </svg>
-          <div class="flex text-sm text-gray-600">
+          <div class="flex text-sm">
             <label
               for="file-upload"
-              class="hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 relative font-medium text-indigo-600 bg-white rounded-md cursor-pointer"
+              class="focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-neutral text-neutral-content bg-neutral relative px-2 font-medium rounded-md cursor-pointer"
             >
               <span>Upload a file</span>
               <input
@@ -83,7 +84,7 @@ const inputHandler = (event: Event) => {
           <p v-if="dragging" class="text-lg font-medium text-white">
             Release to upload
           </p>
-          <p class="text-xs text-gray-500">CSV Files Only</p>
+          <p class="text-xs">CSV Files Only</p>
         </div>
       </div>
     </div>

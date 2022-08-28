@@ -21,7 +21,6 @@ watch(file, async (file) => {
       }
     );
     // end transform
-    console.log("parsed players", players);
     battingStore.players = players.map((player) => ({
       ...player,
       id: crypto.randomUUID(),

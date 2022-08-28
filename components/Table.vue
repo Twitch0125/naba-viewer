@@ -15,57 +15,54 @@ const localItems = ref([]);
 const { items } = toRefs(props);
 syncRef(items, localItems, { direction: "ltr" });
 
-const sortBy = reactive({ value: null, ascending: true });
-const { value: sortByValue } = toRefs(sortBy);
-const sortByHistory = useRefHistory(sortByValue, {
-  capacity: 3,
-  clone: (val) => val /* don't actually need to clone */,
+const sortBy = reactive<{ value: string; ascending: boolean }>({
+  value: null,
+  ascending: true,
 });
 const setSort = (header: TableHeader) => {
-  console.log("setSort", header);
-  if (header !== sortBy.value && sortBy.value !== null) {
-    sortByHistory.clear();
+  if (sortBy.value !== header.name) {
+    sortBy.value = header.name;
+    sortBy.ascending = true;
+    return;
   }
-  /*first history entry => sortBy = value: 'name', ascending: true
-    second history entry => sortBy = value:'name', ascending: false 
-    third history entry => sortBy = value: null, ascending: true */
-  switch (sortByHistory.history.value.length) {
-    case 0:
-      sortBy.value = header.name;
-      sortBy.ascending = true;
-      break;
-    case 1:
-      sortBy.value = header.name;
+  if (sortBy.value === header.name) {
+    if (sortBy.ascending) {
       sortBy.ascending = false;
-      break;
-    case 2:
-      sortBy.value = null;
+    } else if (sortBy.ascending === false) {
       sortBy.ascending = true;
-      sortByHistory.clear();
-      break;
+      sortBy.value = null;
+    }
   }
 };
 
 const sortedItems = computed<any[]>(() => {
   if (sortBy.value) {
-    return [...localItems.value].sort((a, b) => {
-      if (a[sortBy.value] > sortBy.value) {
-        return 1;
-      } else if (b[sortBy.value] < sortBy.value) {
-        return -1;
-      } else {
-        return 0;
+    return [...localItems.value].sort(
+      //destructuring the property stored in setBy.value
+      ({ [sortBy.value]: valueA }, { [sortBy.value]: valueB }) => {
+        if (sortBy.ascending) {
+          return valueB - valueA;
+        } else {
+          return valueA - valueB;
+        }
       }
-    });
+    );
   } else {
     return localItems.value;
   }
+});
+const page = ref(0);
+const itemsPerPage = ref(50);
+const itemsToShow = computed(() => {
+  return sortedItems.value.slice(page.value, itemsPerPage.value);
 });
 </script>
 
 <template>
   <div class="sm:px-6 lg:px-8 px-4">
-    sorting: {{ sortBy.value }} ascending?: {{ sortBy.ascending }}
+    <div>sorting: {{ sortBy.value }} ascending?: {{ sortBy.ascending }}</div>
+    <div>page: {{ page }}</div>
+    <div>items per page: {{ itemsPerPage }}</div>
     <div class="flex flex-col mt-8">
       <div class="sm:-mx-6 lg:-mx-8 -mx-4 -my-2">
         <div class="inline-block min-w-full py-2 align-middle">
@@ -76,7 +73,7 @@ const sortedItems = computed<any[]>(() => {
                   <th
                     v-for="header in headers"
                     :key="header.name"
-                    class="sticky top-0 z-10 border-b border-gray-300 bg-gray-50 bg-opacity-75 py-3.5 pr-3 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter first:pl-6 last:pr-6 cursor-pointer"
+                    class="sticky top-0 z-10 border-b border-gray-300 bg-gray-50 bg-opacity-75 py-3.5 pr-3 text-left text-sm font-semibold text-base-content backdrop-blur backdrop-filter first:pl-6 last:pr-6 cursor-pointer"
                     @click="() => setSort(header)"
                   >
                     {{ header.name }}
@@ -92,7 +89,7 @@ const sortedItems = computed<any[]>(() => {
               </thead>
               <tbody class="bg-white">
                 <tr
-                  v-for="(item, itemIndex) in sortedItems"
+                  v-for="(item, itemIndex) in itemsToShow"
                   :key="itemKey ? item[itemKey] : item.id"
                 >
                   <td
