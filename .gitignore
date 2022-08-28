@@ -8,3 +8,4 @@ node_modules
 dist
 cypress/videos
 cypress/screenshots
+.vercel
