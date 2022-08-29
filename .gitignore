@@ -9,9 +9,17 @@ dist
 cypress/videos
 cypress/screenshots
 .vercel
-# Yarn
+# Yarn Zero-Installs (commenting out until nuxt supports it)
+# .yarn/*
+# !.yarn/cache
+# !.yarn/patches
+# !.yarn/plugins
+# !.yarn/releases
+# !.yarn/sdks
+# !.yarn/versions
+# Yarn without Zero-Installs
+.pnp.*
 .yarn/*
-!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
