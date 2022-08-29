@@ -76,7 +76,7 @@ const inputHandler = (event: Event) => {
                 name="file-upload"
                 type="file"
                 class="sr-only"
-                accept=".csv"
+                accept=".csv,.txt"
               />
             </label>
             <p class="pl-1">or drag and drop</p>
@@ -84,7 +84,6 @@ const inputHandler = (event: Event) => {
           <p v-if="dragging" class="text-lg font-medium text-white">
             Release to upload
           </p>
-          <p class="text-xs">CSV Files Only</p>
         </div>
       </div>
     </div>

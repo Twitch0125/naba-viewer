@@ -76,7 +76,9 @@ const itemsToShow = computed(() => {
                     class="sticky top-0 z-10 border-b border-gray-300 bg-gray-50 bg-opacity-75 py-3.5 pr-3 text-left text-sm font-semibold text-base-content backdrop-blur backdrop-filter first:pl-6 last:pr-6 cursor-pointer"
                     @click="() => setSort(header)"
                   >
-                    {{ header.name }}
+                    {{
+                      header.display === "tbd" ? header.name : header.display
+                    }}
                     <span v-if="sortBy.value === header.name">
                       <ArrowUpIcon class="w-5 h-5" v-show="sortBy.ascending" />
                       <ArrowDownIcon
