@@ -60,7 +60,8 @@ const itemsToShow = computed(() => {
 
 <template>
   <div class="sm:px-6 lg:px-8 px-4">
-    <div>sorting: {{ sortBy.value }} ascending?: {{ sortBy.ascending }}</div>
+    <div>sorting by: {{ sortBy.value }}</div>
+    <div>ascending?: {{ sortBy.ascending }}</div>
     <div>page: {{ page }}</div>
     <div>items per page: {{ itemsPerPage }}</div>
     <div class="flex flex-col mt-8">
@@ -93,6 +94,7 @@ const itemsToShow = computed(() => {
                 <tr
                   v-for="(item, itemIndex) in itemsToShow"
                   :key="itemKey ? item[itemKey] : item.id"
+                  class="hover:bg-primary hover:bg-opacity-5"
                 >
                   <td
                     v-for="header in headers"
