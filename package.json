@@ -1,4 +1,6 @@
 {
+  "name": "naba-viewer",
+  "packageManager": "yarn@3.2.3",
   "private": true,
   "scripts": {
     "build": "nuxt build",
