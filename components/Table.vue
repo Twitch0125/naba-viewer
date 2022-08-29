@@ -94,11 +94,13 @@ const itemsToShow = computed(() => {
                 <tr
                   v-for="(item, itemIndex) in itemsToShow"
                   :key="itemKey ? item[itemKey] : item.id"
-                  class="hover:bg-primary hover:bg-opacity-5"
+                  class="hover:bg-primary hover:bg-opacity-5 group"
                 >
                   <td
                     v-for="header in headers"
-                    class="first:pl-6 last:pr-6"
+                    :class="`first:pl-6 group-first:border-0 last:pr-6 border-neutral border-opacity-5 py-2 border-t ${
+                      typeof item[header.name] === 'number' && 'font-mono'
+                    }`"
                     :key="`${itemKey ? item[itemKey] : item.id}-${header.name}`"
                   >
                     {{ item[header.name] }}
