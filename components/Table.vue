@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ArrowUpIcon, ArrowDownIcon } from "@heroicons/vue/solid/index.js";
+import { ArrowUpIcon, ArrowDownIcon } from "@heroicons/vue/20/solid/index.js";
 import { TableHeader } from "./Table";
 interface TableProps {
   items: any[];
