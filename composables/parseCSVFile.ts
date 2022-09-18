@@ -1,7 +1,5 @@
 import Papa from "papaparse";
 import type { MaybeRef } from "@vueuse/core";
-import { BattingStats } from "~~/types";
-const REMOVE_TOKEN = "REMOVE_TOKEN";
 
 type Transformer<T, X = any> = (row: T) => X[];
 
@@ -28,7 +26,6 @@ export async function parseCSVFile<PlayerType extends any[], ReturnType>(
         reader.result as string,
         transforms
       );
-      parsedCSV;
       resolve({ data: parsedCSV });
     });
     reader.readAsBinaryString(unref(file));

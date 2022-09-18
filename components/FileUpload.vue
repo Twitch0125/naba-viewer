@@ -67,7 +67,7 @@ const inputHandler = (event: Event) => {
           <div class="flex text-sm">
             <label
               for="file-upload"
-              class="focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-neutral text-neutral-content bg-neutral relative px-2 font-medium rounded-md cursor-pointer"
+              class="btn btn-xs"
             >
               <span>Upload a file</span>
               <input
