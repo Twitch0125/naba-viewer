@@ -25,3 +25,5 @@ cypress/screenshots
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+db/pb_data/logs.db
+db/pocketbase

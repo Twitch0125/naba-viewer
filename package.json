@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "test:e2e": "cypress run"
+    "test:e2e": "cypress run",
+    "db:start": "./db/pocketbase serve"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.7.2",
