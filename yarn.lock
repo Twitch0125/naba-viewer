@@ -6303,6 +6303,7 @@ __metadata:
     happy-dom: ^6.0.4
     nuxt: ^3.0.0-rc.10
     papaparse: ^5.3.2
+    pocketbase: ^0.7.1
     typescript: ^4.8.3
     vitest: ^0.23.2
   languageName: unknown
@@ -7032,6 +7033,13 @@ __metadata:
     mlly: ^0.5.14
     pathe: ^0.3.7
   checksum: a0e7bb732333e138597302ced39b93d3d76147e275774fe0f5aad3db0c8191e03af126850d23af639e62791baba393593d0b22e2621c10b9cf432b604f5c9047
+  languageName: node
+  linkType: hard
+
+"pocketbase@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "pocketbase@npm:0.7.1"
+  checksum: e3b95db43236dc15cfdefacf0378c11b57dcbd2d7eac38e9dd620c560d87b6b82f09747ef89d27e07ce26623a085cf2e44369b5d9441bfc276bfe9d76b0db6a2
   languageName: node
   linkType: hard
 

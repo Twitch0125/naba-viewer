@@ -1,5 +1,10 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      POCKETBASE_URL: process.env.POCKETBASE_URL,
+    },
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",

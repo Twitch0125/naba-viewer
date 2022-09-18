@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import type { TableHeader } from "./Table";
-import { useBattingStore } from "~~/stores/battingStore";
-import { BattingPlayer, BattingStats, BattingStatsMap } from "~~/types";
+import { useBattingStore } from "~/stores/battingStore";
 //use players from the store as table items
 const battingStore = useBattingStore();
-const items = $computed<BattingPlayer[]>(() => battingStore.players);
-const selectedHeaders = $computed<TableHeader[]>(
-  () => battingStore.configuredHeaders
-);
 </script>
 
 <template>
-  <Table v-if="items.length" :items="items" :headers="selectedHeaders" />
+  <Table
+    v-if="battingStore.players.length"
+    :items="battingStore.players"
+    :headers="battingStore.configuredHeaders"
+  />
 </template>

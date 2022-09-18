@@ -4,6 +4,7 @@ import { BattingPlayer, BattingStats, BattingStatsMap } from "~~/types";
 
 const file = ref<File>({});
 const battingStore = useBattingStore();
+const { client, loggedIn } = await usePB();
 
 watch(file, async (file) => {
   if (file) {
@@ -25,10 +26,31 @@ watch(file, async (file) => {
       ...player,
       id: crypto.randomUUID(),
     }));
+    //create new players
+    const newPlayers = new Set();
+    players.forEach((p) =>
+      newPlayers.add(
+        JSON.stringify({
+          firstname: p.firstname,
+          lastname: p.lastname,
+          player_id: p["player ID"],
+        })
+      )
+    );
+
+    await client.admins.authViaEmail("twitcherc@gmail.com", "smalls0125");
+    const promises = [];
+    newPlayers.forEach((p) => {
+      const data = JSON.parse(p);
+      promises.push(client.records.create("players", data));
+    });
+    await Promise.all(promises);
+    console.log("players made");
   }
 });
 </script>
 
 <template>
+  <div>Logged in?: {{ loggedIn }}</div>
   <FileUpload v-model="file" />
 </template>
