@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { useBattingStore } from "~~/stores/battingStore";
-import { BattingPlayer, BattingStats, BattingStatsMap } from "~~/types";
+import { useBattingStore } from "~/stores/battingStore";
+import { BattingPlayer, BattingStats, BattingStatsMap } from "~/types";
 
 const file = ref<File>({});
 const battingStore = useBattingStore();
-const { client, loggedIn } = await usePB();
+const { client } = usePB();
 
 watch(file, async (file) => {
   if (file) {
@@ -21,11 +21,6 @@ watch(file, async (file) => {
         },
       }
     );
-    // end transform
-    battingStore.players = players.map((player) => ({
-      ...player,
-      id: crypto.randomUUID(),
-    }));
     //create new players
     const newPlayers = new Set();
     players.forEach((p) =>
@@ -38,7 +33,6 @@ watch(file, async (file) => {
       )
     );
 
-    await client.admins.authViaEmail("twitcherc@gmail.com", "smalls0125");
     const promises = [];
     newPlayers.forEach((p) => {
       const data = JSON.parse(p);
@@ -50,6 +44,5 @@ watch(file, async (file) => {
 </script>
 
 <template>
-  <div>Logged in?: {{ loggedIn }}</div>
   <FileUpload v-model="file" />
 </template>

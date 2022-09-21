@@ -1,5 +1,5 @@
 <script setup>
-const { client, loggedIn } = await usePB();
+const { client, loggedIn } = usePB();
 </script>
 <template>
   <div

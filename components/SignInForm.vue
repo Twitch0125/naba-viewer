@@ -34,6 +34,17 @@
           </div>
         </div>
 
+        <div>
+          <label class="cursor-pointer">
+            <input
+              name="admin"
+              type="checkbox"
+              class="checkbox checkbox-primary checkbox-sm"
+            />
+            <span class="label-text ml-2"> Admin </span>
+          </label>
+        </div>
+
         <div class="flex items-center justify-between">
           <div class="text-sm">
             <a

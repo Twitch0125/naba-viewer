@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { TableHeader } from "~~/components/Table";
 
-const { client } = await usePB();
+const { client } = usePB();
 const { data: players } = await useAsyncData(async (nuxtApp) => {
   return await client.records.getFullList("players");
 });

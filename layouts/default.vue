@@ -1,9 +1,13 @@
 <script setup>
 const { client, loggedIn } = usePB();
+const { data: isAdmin, refresh } = useLazyAsyncData(async () => {
+  const isAdmin = await useIsAdmin();
+  return isAdmin.value;
+});
 async function signOut() {
   client.authStore.clear();
   await $fetch("/api/sessions", { method: "delete" });
-  // location.reload();
+  await refresh();
 }
 </script>
 <template>
@@ -24,6 +28,13 @@ async function signOut() {
           >Signin / Register</nuxt-link
         >
         <button v-else @click="signOut">Sign out</button>
+
+        <nuxt-link
+          to="/admin"
+          class="badge badge-secondary badge-sm"
+          v-if="isAdmin"
+          >admin</nuxt-link
+        >
       </nav>
       <nuxt-page />
     </div>
