@@ -1,3 +1,11 @@
+<script setup>
+const { client, loggedIn } = usePB();
+async function signOut() {
+  client.authStore.clear();
+  await $fetch("/api/sessions", { method: "delete" });
+  // location.reload();
+}
+</script>
 <template>
   <div>
     <BaseHead />
@@ -12,9 +20,10 @@
           >Report a bug/Give feedback</a
         >
         <div class="flex-grow"></div>
-        <nuxt-link class="hover:underline" to="/signin"
+        <nuxt-link v-if="!loggedIn" class="hover:underline" to="/signin"
           >Signin / Register</nuxt-link
         >
+        <button v-else @click="signOut">Sign out</button>
       </nav>
       <nuxt-page />
     </div>

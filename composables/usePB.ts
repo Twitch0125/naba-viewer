@@ -1,4 +1,4 @@
-export default async function usePB() {
+export default function usePB() {
   const nuxtApp = useNuxtApp();
   const client = nuxtApp.$pb;
   const loggedIn = ref(client.authStore.isValid);
