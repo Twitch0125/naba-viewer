@@ -45,7 +45,6 @@ watch(file, async (file) => {
       promises.push(client.records.create("players", data));
     });
     await Promise.all(promises);
-    console.log("players made");
   }
 });
 </script>

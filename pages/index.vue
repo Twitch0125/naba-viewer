@@ -1,9 +1,13 @@
+<script setup>
+const { client, loggedIn } = await usePB();
+</script>
 <template>
   <div
     class="sm:items-start container flex flex-col items-center max-w-2xl mx-auto"
   >
     <h1 class="text-base-content mb-4 text-2xl font-medium text-center">
-      Welcome to NABA Tools!
+      <span v-if="!loggedIn"> Welcome to NABA Tools! </span>
+      <span v-else> Welcome back, {{ client.authStore.model.email }} </span>
     </h1>
     <div class="flex gap-2">
       <div

@@ -1,7 +1,7 @@
-export default defineNuxtRouteMiddleware(async () => {
+export default defineNuxtRouteMiddleware(async (middleware) => {
   //   return navigateTo("/", { redirectCode: 401 });
-  const { loggedIn } = await usePB();
+  const { client, loggedIn } = await usePB();
   if (!loggedIn.value) {
-    return navigateTo("/login", { redirectCode: 401 });
+    return navigateTo("/signin", { redirectCode: 401 });
   }
 });
