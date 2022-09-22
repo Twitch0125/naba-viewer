@@ -11,5 +11,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("daisyui")],
+  daisyui:{
+    themes: ['winter']
+  },
+  plugins: [require("@tailwindcss/forms"), require("daisyui"), require('@headlessui/tailwindcss')],
 };
