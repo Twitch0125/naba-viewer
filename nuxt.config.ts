@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
     public: {
       POCKETBASE_URL: process.env.POCKETBASE_URL,
+      REDIRECT_URI: process.env.REDIRECT_URI,
     },
   },
   modules: [

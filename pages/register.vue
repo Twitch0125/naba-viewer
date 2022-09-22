@@ -21,5 +21,8 @@ definePageMeta({
       </p>
     </div>
     <RegisterForm />
+    <nuxt-link class="mx-auto mt-2 font-medium text-base underline" to="/">
+      Go Home
+    </nuxt-link>
   </div>
 </template>
