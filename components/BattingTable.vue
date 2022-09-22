@@ -1,13 +1,14 @@
-<script setup lang="ts">
+<script setup>
 import { useBattingStore } from "~/stores/battingStore";
 //use players from the store as table items
 const battingStore = useBattingStore();
+battingStore.getBattingStats();
 </script>
 
 <template>
   <Table
-    v-if="battingStore.players.length"
-    :items="battingStore.players"
+    v-if="battingStore.stats.length"
+    :items="battingStore.stats"
     :headers="battingStore.configuredHeaders"
   />
 </template>

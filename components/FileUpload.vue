@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  modelValue: File;
+  modelValue?: File;
 }>();
 
 const dataModel = useVModel(props, "modelValue");
@@ -40,10 +40,10 @@ const inputHandler = (event: Event) => {
       @dragenter.stop.prevent="dragEnter"
       @dragover.stop.prevent
       @dragleave.stop.prevent="dragLeave"
-      class="sm:mt-0 sm:col-span-2 mt-1"
+      class="mt-1 sm:col-span-2 sm:mt-0"
     >
       <div
-        :class="`w-full flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md ${
+        :class="`flex w-full justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6 ${
           dragging
             ? 'bg-primary-focus text-primary-content'
             : 'bg-primary bg-opacity-5 text-primary'
@@ -51,7 +51,7 @@ const inputHandler = (event: Event) => {
       >
         <div class="space-y-1 text-center">
           <svg
-            class="w-12 h-12 mx-auto"
+            class="mx-auto h-12 w-12"
             stroke="currentColor"
             fill="none"
             viewBox="0 0 48 48"
@@ -65,10 +65,7 @@ const inputHandler = (event: Event) => {
             />
           </svg>
           <div class="flex text-sm">
-            <label
-              for="file-upload"
-              class="btn btn-xs"
-            >
+            <label for="file-upload" class="btn btn-xs">
               <span>Upload a file</span>
               <input
                 id="file-upload"
