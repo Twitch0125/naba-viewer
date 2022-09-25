@@ -25,6 +25,7 @@
     "@vueuse/components": "^9.2.0",
     "@vueuse/core": "^9.2.0",
     "@vueuse/nuxt": "^9.2.0",
+    "appwrite": "^10.1.0",
     "cypress": "^10.8.0",
     "daisyui": "^2.28.0",
     "happy-dom": "^6.0.4",

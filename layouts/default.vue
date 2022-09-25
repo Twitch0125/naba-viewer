@@ -1,11 +1,9 @@
 <script setup>
-const { client, loggedIn } = usePB();
 const { data: isAdmin, refresh } = useLazyAsyncData(async () => {
   const isAdmin = await useIsAdmin();
   return isAdmin.value;
 });
 async function signOut() {
-  client.authStore.clear();
   await $fetch("/api/sessions", { method: "delete" });
   await refresh();
 }
@@ -13,9 +11,9 @@ async function signOut() {
 <template>
   <div>
     <BaseHead />
-    <div class="bg-base-200 flex flex-col min-h-screen px-4 text-base">
+    <div class="flex min-h-screen flex-col bg-base-200 px-4 text-base">
       <nav
-        class="text-base-content border-primary border-opacity-10 container max-w-2xl mx-auto my-6 gap-x-3 text-sm font-medium uppercase border-b flex items-center"
+        class="container mx-auto my-6 flex max-w-2xl items-center gap-x-3 border-b border-primary border-opacity-10 text-sm font-medium uppercase text-base-content"
       >
         <nuxt-link class="hover:underline" to="/">Home</nuxt-link>
         <a
@@ -24,14 +22,14 @@ async function signOut() {
           >Report a bug/Give feedback</a
         >
         <div class="flex-grow"></div>
-        <nuxt-link v-if="!loggedIn" class="hover:underline" to="/signin"
+        <nuxt-link class="hover:underline" to="/signin"
           >Signin / Register</nuxt-link
         >
-        <button v-else @click="signOut">Sign out</button>
+        <!-- <button v-else @click="signOut">Sign out</button> -->
 
         <nuxt-link
           to="/admin"
-          class="badge badge-secondary badge-sm"
+          class="badge-secondary badge badge-sm"
           v-if="isAdmin"
           >admin</nuxt-link
         >
