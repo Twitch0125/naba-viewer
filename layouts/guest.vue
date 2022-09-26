@@ -2,7 +2,8 @@
 <template>
   <div>
     <BaseHead />
-    <div class="bg-base-200 flex flex-col min-h-screen px-4 text-base">
+    <Messages />
+    <div class="flex min-h-screen flex-col bg-base-200 px-4 text-base">
       <div class="container mx-auto">
         <nuxt-page />
       </div>

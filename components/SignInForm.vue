@@ -1,15 +1,24 @@
 <script setup>
 import { Account } from "appwrite";
+import { useNotifcationStore } from "~~/stores/notificationStore";
+
 const { client } = useAppwrite();
 const email = ref();
 const password = ref();
 
 const signin = async () => {
   const account = new Account(client);
-  await account.create("unique()", email.value, password.value);
-  const router = useRouter();
-  router.push("/");
+  try {
+    await account.createEmailSession(email.value, password.value);
+    const router = useRouter();
+    router.push("/");
+  } catch (err) {
+    const notificationStore = useNotifcationStore();
+    notificationStore.addMessage({ text: err?.message || err });
+  }
 };
+
+const discordProvider = ref(false);
 </script>
 <template>
   <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
@@ -54,7 +63,7 @@ const signin = async () => {
             <input
               name="admin"
               type="checkbox"
-              class="checkbox-primary checkbox checkbox-sm"
+              class="checkbox checkbox-primary checkbox-sm"
             />
             <span class="label-text ml-2"> Admin </span>
           </label>

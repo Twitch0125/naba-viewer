@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     ADMIN_EMAIL: process.env.ADMIN_EMAIL,
     ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
-    APPWRITE_PROJECT: process.env.APPWRITE_PROJECT,
     public: {
+      APPWRITE_PROJECT: process.env.APPWRITE_PROJECT,
       APPWRITE_URL: process.env.APPWRITE_URL,
       POCKETBASE_URL: process.env.POCKETBASE_URL,
       REDIRECT_URI: process.env.REDIRECT_URI,
