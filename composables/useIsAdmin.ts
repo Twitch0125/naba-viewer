@@ -1,5 +1,5 @@
 export default async function useIsAdmin() {
-  const { client } = usePB();
+  const { client } = useAppwrite();
   const isAdmin = ref(false);
   try {
     await client.admins.refresh();

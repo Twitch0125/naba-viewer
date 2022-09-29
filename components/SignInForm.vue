@@ -1,20 +1,37 @@
 <script setup>
 import { Account } from "appwrite";
-import { useNotifcationStore } from "~~/stores/notificationStore";
+import { Form, Field, ErrorMessage } from "vee-validate";
+import * as yup from "yup";
+import { useNotifcationStore, defaultAction } from "~/stores/notificationStore";
 
 const { client } = useAppwrite();
 const email = ref();
 const password = ref();
 
+const schemaObj = yup.object({
+  email: yup.string().required().email(),
+  password: yup.string().required(),
+});
+
 const signin = async () => {
   const account = new Account(client);
   try {
     await account.createEmailSession(email.value, password.value);
+    const { jwt } = await account.createJWT();
+    await $fetch("/set-cookie", {
+      method: "PUT",
+      body: {
+        cookies: [{ key: "appwrite_jwt", value: jwt }],
+      },
+    });
     const router = useRouter();
     router.push("/");
   } catch (err) {
     const notificationStore = useNotifcationStore();
-    notificationStore.addMessage({ text: err?.message || err });
+    notificationStore.addMessage({
+      text: err?.message || err,
+      type: "error",
+    });
   }
 };
 
@@ -23,13 +40,13 @@ const discordProvider = ref(false);
 <template>
   <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
     <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-      <form class="space-y-6" @submit.prevent="signin">
+      <Form :validation-schema="schemaObj" class="space-y-6" @submit="signin">
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700"
             >Email address</label
           >
           <div class="mt-1">
-            <input
+            <Field
               v-model="email"
               id="email"
               name="email"
@@ -38,6 +55,7 @@ const discordProvider = ref(false);
               required
               class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
             />
+            <ErrorMessage name="email" class="text-error-content" />
           </div>
         </div>
 
@@ -46,7 +64,7 @@ const discordProvider = ref(false);
             >Password</label
           >
           <div class="mt-1">
-            <input
+            <Field
               v-model="password"
               id="password"
               name="password"
@@ -55,6 +73,7 @@ const discordProvider = ref(false);
               required
               class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
             />
+            <ErrorMessage name="password" class="text-error-content" />
           </div>
         </div>
 
@@ -87,7 +106,7 @@ const discordProvider = ref(false);
             Sign in
           </button>
         </div>
-      </form>
+      </Form>
       <!-- identiy providers -->
       <div v-if="discordProvider" class="mt-6">
         <div class="relative">

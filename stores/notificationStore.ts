@@ -6,17 +6,18 @@ export interface Message {
   duration?: number;
   text?: string;
   action?: MessageAction;
+  type?: "success" | "info" | "error" | "warning";
   timeoutID?: any;
 }
+export const defaultAction: MessageAction = {
+  text: "",
+  handler: (message: Message) => {
+    clearTimeout(message.timeoutID);
+  },
+};
 
 export const useNotifcationStore = defineStore("notificationStore", () => {
   const messages = ref<Message[]>([]);
-  const defaultAction: MessageAction = {
-    text: "",
-    handler: (message: Message) => {
-      clearTimeout(message.timeoutID);
-    },
-  };
   const addMessage = (message: Message) => {
     const defaultMessage = { duration: 4000, action: defaultAction };
     message = { ...defaultMessage, ...message };

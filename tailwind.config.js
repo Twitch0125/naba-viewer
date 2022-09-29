@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ['./*/*.vue'],
   theme: {
     extend: {
       fontFamily: {
@@ -12,7 +12,7 @@ module.exports = {
     },
   },
   daisyui:{
-    themes: ['winter']
+    themes: ['winter'],
   },
   plugins: [require("@tailwindcss/forms"), require("daisyui"), require('@headlessui/tailwindcss')],
 };

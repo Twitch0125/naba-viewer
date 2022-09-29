@@ -2116,6 +2116,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^0.27.2":
+  version: 0.27.2
+  resolution: "axios@npm:0.27.2"
+  dependencies:
+    follow-redirects: ^1.14.9
+    form-data: ^4.0.0
+  checksum: 38cb7540465fe8c4102850c4368053c21683af85c5fdf0ea619f9628abbcb59415d1e22ebc8a6390d2bbc9b58a9806c874f139767389c862ec9b772235f06854
+  languageName: node
+  linkType: hard
+
 "balanced-match@npm:^1.0.0":
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
@@ -2749,7 +2759,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"combined-stream@npm:^1.0.6, combined-stream@npm:~1.0.6":
+"combined-stream@npm:^1.0.6, combined-stream@npm:^1.0.8, combined-stream@npm:~1.0.6":
   version: 1.0.8
   resolution: "combined-stream@npm:1.0.8"
   dependencies:
@@ -4402,7 +4412,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.0.0":
+"follow-redirects@npm:^1.0.0, follow-redirects@npm:^1.14.9":
   version: 1.15.2
   resolution: "follow-redirects@npm:1.15.2"
   peerDependenciesMeta:
@@ -4427,6 +4437,17 @@ __metadata:
     combined-stream: ^1.0.6
     mime-types: ^2.1.12
   checksum: 5134ada56cc246b293a1ac7678dba6830000603a3979cf83ff7b2f21f2e3725202237cfb89e32bcb38a1d35727efbd3c3a22e65b42321e8ade8eec01ce755d08
+  languageName: node
+  linkType: hard
+
+"form-data@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "form-data@npm:4.0.0"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.8
+    mime-types: ^2.1.12
+  checksum: 01135bf8675f9d5c61ff18e2e2932f719ca4de964e3be90ef4c36aacfc7b9cb2fceb5eca0b7e0190e3383fe51c5b37f4cb80b62ca06a99aaabfcfd6ac7c9328c
   languageName: node
   linkType: hard
 
@@ -6417,12 +6438,14 @@ __metadata:
     cypress: ^10.8.0
     daisyui: ^2.31.0
     happy-dom: ^6.0.4
+    node-appwrite: ^8.1.0
     nuxt: ^3.0.0-rc.11
     papaparse: ^5.3.2
     pocketbase: ^0.7.1
     prettier: ^2.7.1
     prettier-plugin-tailwindcss: ^0.1.13
     typescript: ^4.8.3
+    unstorage: ^0.5.6
     vee-validate: ^4.6.9
     vitest: ^0.23.4
     yup: ^0.32.11
@@ -6552,6 +6575,16 @@ __metadata:
   dependencies:
     node-gyp: latest
   checksum: 7c5e2043ac37f6108784d94ed73a44ae6d3e68eb968de60680922fc6bc3d17fa69448c0feb4e0c9d3f4c74a0324822e566a8340a56916d9d6f23cb3e85620334
+  languageName: node
+  linkType: hard
+
+"node-appwrite@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "node-appwrite@npm:8.1.0"
+  dependencies:
+    axios: ^0.27.2
+    form-data: ^4.0.0
+  checksum: 63a96d9abe1c6d693cc7e974b57e185b438c79f2e0182f832126ceaea9ff5565b0147f5be017a39ee6db1466569d5167adea116ac8f6f0eecd049ea15019244f
   languageName: node
   linkType: hard
 

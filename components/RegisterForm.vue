@@ -1,27 +1,55 @@
 <script setup>
 import { LockClosedIcon } from "@heroicons/vue/24/outline/index.js";
-import { useForm, useField } from "vee-validate";
-import { string } from "yup";
+import { Account } from "appwrite";
+import { Form, Field, ErrorMessage } from "vee-validate";
+import * as yup from "yup";
+import { useNotifcationStore } from "~~/stores/notificationStore";
 
-const email = useField("email", string().email().required());
+const email = ref();
+const password = ref();
+const passwordConfirm = ref();
 
-const password = useField("password", string().required());
-const confirmPassword = useField(
-  "password-confirm",
-  (value) => (value && value === password.value.value) || "Must match password"
-);
+const formSchema = yup.object({
+  email: yup.string().email().required(),
+  password: yup.string().required(),
+  passwordConfirm: yup
+    .string()
+    .oneOf([yup.ref("password"), null], "Must match password"),
+});
+
+const { client } = useAppwrite();
+
+const register = async () => {
+  const account = new Account(client);
+  try {
+    await account.create("unique()", email.value, passwordConfirm.value);
+    await account.createEmailSession(email.value, passwordConfirm.value);
+    const router = useRouter();
+    router.push("/");
+  } catch (err) {
+    const notificationStore = useNotifcationStore();
+    notificationStore.addMessage({
+      text: err?.message || err,
+      type: "error",
+    });
+  }
+};
 </script>
 <template>
   <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
     <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-      <form class="space-y-6" action="/api/users" method="POST">
+      <Form
+        :validation-schema="formSchema"
+        class="space-y-6"
+        @submit="register"
+      >
         <div>
           <label for="email" class="block text-sm font-medium text-base-content"
             >Email address*</label
           >
           <div class="mt-1">
-            <input
-              v-model="email.value.value"
+            <Field
+              v-model="email"
               id="email"
               name="email"
               type="email"
@@ -29,9 +57,7 @@ const confirmPassword = useField(
               required=""
               class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
             />
-            <span class="text-error-content">{{
-              email.errorMessage.value
-            }}</span>
+            <ErrorMessage name="email" class="text-error-content" />
           </div>
         </div>
 
@@ -42,8 +68,8 @@ const confirmPassword = useField(
             >Password*</label
           >
           <div class="mt-1">
-            <input
-              v-model="password.value.value"
+            <Field
+              v-model="password"
               id="password"
               name="password"
               type="password"
@@ -51,9 +77,7 @@ const confirmPassword = useField(
               required=""
               class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
             />
-            <span class="text-error-content">{{
-              password.errorMessage.value
-            }}</span>
+            <ErrorMessage name="password" class="text-error-content" />
           </div>
         </div>
         <div>
@@ -63,41 +87,28 @@ const confirmPassword = useField(
             >Confirm Password*</label
           >
           <div class="mt-1">
-            <input
-              v-model="confirmPassword.value.value"
+            <Field
+              v-model="passwordConfirm"
               id="passwordConfirm"
               name="passwordConfirm"
               type="password"
               autocomplete="new-password"
               required=""
-              class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-primary sm:text-sm relative"
+              class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
             />
-            <Transition
-              enter-active-class="duration-150 ease-out transition"
-              enter-from-class="-translate-y-2 opacity-0"
-              enter-to-class="translate-y-0 opacity-100"
-              leave-active-class="duration-150 ease-out transition"
-              leave-from-class="translate-y-0 opacity-100"
-              leave-to-class="-translate-y-2 opacity-0"
-            >
-              <span
-                v-if="confirmPassword.errorMessage.value"
-                class="absolute text-sm text-error"
-                >{{ confirmPassword.errorMessage.value }}</span
-              >
-            </Transition>
+            <ErrorMessage name="passwordConfirm" class="text-error-content" />
           </div>
         </div>
         <div>
           <button
             type="submit"
-            class="flex w-full items-center justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 gap-2"
+            class="flex w-full items-center justify-center gap-2 rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
-            <LockClosedIcon class="w-6 h-6" />
+            <LockClosedIcon class="h-6 w-6" />
             Register
           </button>
         </div>
-      </form>
+      </Form>
     </div>
   </div>
 </template>
