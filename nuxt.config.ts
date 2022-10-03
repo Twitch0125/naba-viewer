@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
     "@kevinmarrec/nuxt-pwa",
+    "trpc-nuxt",
     [
       "@pinia/nuxt",
       {
@@ -24,6 +25,13 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  trpc: {
+    baseURL: "", // Set empty string (default) to make requests by relative address
+    endpoint: "/trpc", // defaults to /trpc
+  },
+  typescript: {
+    strict: true, // required to make input/output types work
+  },
   experimental: {
     reactivityTransform: true,
   },
