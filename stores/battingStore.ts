@@ -1,10 +1,10 @@
-import { BattingStatsDetails } from "~~/types";
+import { BattingStatsDetails } from '~~/types'
 
-export const useBattingStore = defineStore("battingStore", () => {
+export const useBattingStore = defineStore('battingStore', () => {
   const headers = Object.values(BattingStatsDetails).reduce((acc, cur) => {
-    acc.push(cur);
-    return acc;
-  }, []);
+    acc.push(cur)
+    return acc
+  }, [])
   // const headers = [
   //   "player ID",
   //   "lastname",
@@ -44,28 +44,28 @@ export const useBattingStore = defineStore("battingStore", () => {
   //   "OOTP pID",
   // ];
   const configuredHeaders = computed(() =>
-    headers.filter((header) => !header.disabled)
-  );
+    headers.filter(header => !header.disabled),
+  )
 
-  const stats = ref([]);
+  const stats = ref([])
 
   const getBattingStats = async ({ page = 1, limit = 50, query = {} } = {}) => {
     return useLazyAsyncData(async () => {
-      const { client } = usePB();
+      const client = useClient()
       const result = await client.records.getList(
-        "player_stats",
+        'player_stats',
         page,
         limit,
-        query
-      );
-      stats.value = result.items.map((item) => item.data);
-      return result;
-    });
-  };
+        query,
+      )
+      stats.value = result.items.map(item => item.data)
+      return result
+    })
+  }
 
   return {
     stats,
     configuredHeaders,
     getBattingStats,
-  };
-});
+  }
+})

@@ -1,33 +1,32 @@
 <script setup>
-const { client } = usePB();
+const client = useClient()
 const { data: discordProvider } = useLazyAsyncData(async () => {
-  const { authProviders } = await client.users.listAuthMethods();
+  const { authProviders } = await client.users.listAuthMethods()
   const discordProvider = authProviders.find(
-    (provider) => provider.name === "discord"
-  );
-  if (!discordProvider) {
-    return false;
-  }
-  return discordProvider;
-});
+    provider => provider.name === 'discord',
+  )
+  if (!discordProvider)
+    return false
+
+  return discordProvider
+})
 
 const {
   public: { REDIRECT_URI },
-} = useRuntimeConfig();
-const authUrl = computed(() => discordProvider.value.authUrl + REDIRECT_URI);
+} = useRuntimeConfig()
+const authUrl = computed(() => discordProvider.value.authUrl + REDIRECT_URI)
 
 const saveProvider = () => {
-  localStorage.setItem("provider", JSON.stringify(discordProvider.value));
-};
+  localStorage.setItem('provider', JSON.stringify(discordProvider.value))
+}
 </script>
+
 <template>
   <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
     <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
       <form class="space-y-6" method="POST" action="/api/sessions">
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700"
-            >Email address</label
-          >
+          <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
           <div class="mt-1">
             <input
               id="email"
@@ -35,15 +34,13 @@ const saveProvider = () => {
               type="email"
               autocomplete="email"
               required
-              class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
-            />
+              class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 shadow-sm placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
+            >
           </div>
         </div>
 
         <div>
-          <label for="password" class="block text-sm font-medium text-gray-700"
-            >Password</label
-          >
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
           <div class="mt-1">
             <input
               id="password"
@@ -51,8 +48,8 @@ const saveProvider = () => {
               type="password"
               autocomplete="current-password"
               required
-              class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
-            />
+              class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 shadow-sm placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
+            >
           </div>
         </div>
 
@@ -61,8 +58,8 @@ const saveProvider = () => {
             <input
               name="admin"
               type="checkbox"
-              class="checkbox checkbox-primary checkbox-sm"
-            />
+              class="checkbox-primary checkbox checkbox-sm"
+            >
             <span class="label-text ml-2"> Admin </span>
           </label>
         </div>
@@ -100,11 +97,11 @@ const saveProvider = () => {
         <div class="mt-6 gap-3">
           <div>
             <a
-              @click="saveProvider"
               :href="authUrl"
-              class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50 gap-2"
+              class="inline-flex w-full justify-center gap-2 rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
+              @click="saveProvider"
             >
-              <DiscordIcon class="w-5 h-5" />
+              <DiscordIcon class="h-5 w-5" />
               <span>Sign in with Discord</span>
             </a>
           </div>

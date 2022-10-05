@@ -1,41 +1,46 @@
 <script setup>
-const { client, loggedIn } = usePB();
 </script>
+
 <template>
   <div
-    class="sm:items-start container flex flex-col items-center max-w-2xl mx-auto"
+    class="container mx-auto flex max-w-2xl flex-col items-center sm:items-start"
   >
-    <h1 class="text-base-content mb-4 text-2xl font-medium text-center">
-      <span v-if="!loggedIn"> Welcome to NABA Tools! </span>
-      <span v-else> Welcome back, {{ client.authStore.model.email }} </span>
+    <h1 class="mb-4 text-center text-2xl font-medium text-base-content">
+      <span> Welcome to NABA Tools! </span>
     </h1>
     <div class="flex gap-2">
       <div
-        class="bg-base-100 flex flex-col items-center justify-center w-full max-w-sm p-6 space-y-4 text-center rounded shadow"
+        class="flex w-full max-w-sm flex-col items-center justify-center space-y-4 rounded bg-base-100 p-6 text-center shadow"
       >
         <nuxt-link
           class="text-base-content600 text-xl font-medium"
           to="/batting"
-          >Batting Stats Table</nuxt-link
         >
+          Batting Stats Table
+        </nuxt-link>
         <p>
           Upload the batting stat dump from discord and sort by each stat.
           <b>Work in progress.</b>
         </p>
-        <nuxt-link class="btn btn-primary btn-md" to="/batting"> Go </nuxt-link>
+        <nuxt-link class="btn-primary btn-md btn" to="/batting">
+          Go
+        </nuxt-link>
       </div>
       <div
-        class="bg-base-100 flex flex-col items-center justify-center w-full max-w-sm p-6 space-y-4 text-center rounded shadow"
+        class="flex w-full max-w-sm flex-col items-center justify-center space-y-4 rounded bg-base-100 p-6 text-center shadow"
       >
         <nuxt-link
           class="text-base-content600 text-xl font-medium"
           to="/batting"
-          >Player Viewer</nuxt-link
         >
+          Player Viewer
+        </nuxt-link>
         <p>
           <b>Work in progress.</b>
         </p>
-        <nuxt-link class="btn btn-primary btn-md" to="/players"> Go </nuxt-link>
+        <nuxt-link class="btn-primary btn-md btn" to="/players">
+          Go
+        </nuxt-link>
       </div>
     </div>
   </div>
