@@ -1,11 +1,20 @@
 <script setup>
 import { ExclamationTriangleIcon } from '@heroicons/vue/20/solid'
+import { useUserStore } from '~~/stores/userStore'
 const client = useClient()
 const username = ref()
 const password = ref()
 const errors = ref()
 const submit = async () => {
-  await client.mutation('auth.creatSession', { username: username.value, password: password.value }).catch(err => errors.value = err.message)
+  try {
+    await client.mutation('auth.creatSession', { username: username.value, password: password.value })
+    await useUserStore().getUserDetails()
+    const router = useRouter()
+    router.replace('/')
+  }
+  catch (err) {
+    errors.value = err.message
+  }
 }
 </script>
 

@@ -2,14 +2,14 @@ import type { CompatibilityEvent } from 'h3'
 import { Entity, Schema } from 'redis-om'
 import useRedis from '../utils/useRedis'
 
-interface User {
+export interface User {
   username: string
   password: string
   createdAt: string
   updatedAt: string
   role: string
 }
-class User extends Entity {}
+export class User extends Entity {}
 const userSchema = new Schema(User, {
   username: {
     type: 'string',

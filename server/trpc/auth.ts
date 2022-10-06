@@ -39,7 +39,7 @@ export const router = trpc
         })
 
         setCookie(req.ctx.event, 'session_token', token, { secure: true, httpOnly: true, sameSite: 'strict' })
-        return sendRedirect(req.ctx.event, '/')
+        return 'ok'
       }
       throw new trpc.TRPCError({ code: 'BAD_REQUEST', message: 'invalid username or password' })
     },

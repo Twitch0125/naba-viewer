@@ -1,4 +1,7 @@
 <script setup>
+import { useUserStore } from '~/stores/userStore'
+const userStore = useUserStore()
+const user = userStore.user
 </script>
 
 <template>
@@ -6,7 +9,10 @@
     class="container mx-auto flex max-w-2xl flex-col items-center sm:items-start"
   >
     <h1 class="mb-4 text-center text-2xl font-medium text-base-content">
-      <span> Welcome to NABA Tools! </span>
+      <span v-if="!user"> Welcome to NABA Tools! </span>
+      <span v-else>
+        Welcome, {{ user.username }}
+      </span>
     </h1>
     <div class="flex gap-2">
       <div
