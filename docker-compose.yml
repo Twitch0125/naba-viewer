@@ -12,18 +12,16 @@ services:
       - db:/var/lib/postgresql/data
     ports:
       - 5432:5432
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
   redis-stack:
-    image: redis/redis-stack
+    image: redis/redis-stack-server
     ports:
       - 6379:6379
-      - 8001:8001
     volumes:
       - redis:/data
+  ui:
+    build: .
+    ports:
+      - 3000:3000
 volumes:
   db:
   redis:
