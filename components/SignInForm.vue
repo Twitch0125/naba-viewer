@@ -1,38 +1,27 @@
 <script setup>
+import { ExclamationTriangleIcon } from '@heroicons/vue/20/solid'
 const client = useClient()
-const { data: discordProvider } = useLazyAsyncData(async () => {
-  const { authProviders } = await client.users.listAuthMethods()
-  const discordProvider = authProviders.find(
-    provider => provider.name === 'discord',
-  )
-  if (!discordProvider)
-    return false
-
-  return discordProvider
-})
-
-const {
-  public: { REDIRECT_URI },
-} = useRuntimeConfig()
-const authUrl = computed(() => discordProvider.value.authUrl + REDIRECT_URI)
-
-const saveProvider = () => {
-  localStorage.setItem('provider', JSON.stringify(discordProvider.value))
+const username = ref()
+const password = ref()
+const errors = ref()
+const submit = async () => {
+  await client.mutation('auth.creatSession', { username: username.value, password: password.value }).catch(err => errors.value = err.message)
 }
 </script>
 
 <template>
   <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
     <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-      <form class="space-y-6" method="POST" action="/api/sessions">
+      <form class="space-y-6" @submit.prevent="submit">
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+          <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
           <div class="mt-1">
             <input
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="email"
+              id="username"
+              v-model="username"
+              name="username"
+              type="username"
+              autocomplete="username"
               required
               class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 shadow-sm placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
             >
@@ -44,6 +33,7 @@ const saveProvider = () => {
           <div class="mt-1">
             <input
               id="password"
+              v-model="password"
               name="password"
               type="password"
               autocomplete="current-password"
@@ -73,7 +63,11 @@ const saveProvider = () => {
             >
           </div>
         </div> -->
-
+        <div v-if="errors">
+          <div class="rounded bg-red-50 px-4 py-2 text-red-800">
+            <p><ExclamationTriangleIcon class="mr-2 inline h-5 w-5" /> {{ errors }}</p>
+          </div>
+        </div>
         <div>
           <button
             type="submit"
@@ -84,7 +78,7 @@ const saveProvider = () => {
         </div>
       </form>
       <!-- identiy providers -->
-      <div v-if="discordProvider" class="mt-6">
+      <!-- <div v-if="discordProvider" class="mt-6">
         <div class="relative">
           <div class="absolute inset-0 flex items-center">
             <div class="w-full border-t border-gray-300" />
@@ -106,7 +100,7 @@ const saveProvider = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
